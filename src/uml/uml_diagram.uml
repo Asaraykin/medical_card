@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="380.0">util.ValidationUtil</node>
+    <node x="21.0" y="0.0">repository.SurgeryRepository</node>
+    <node x="0.0" y="232.0">repository.jpa.JpaUserRepositoryImpl</node>
+    <node x="320.0" y="380.0">web.SecurityUtil</node>
+    <node x="231.0" y="79.0">repository.jpa.JpaPatientRepositoryImpl</node>
+    <node x="226.0" y="153.0">service.user.UserService</node>
+    <node x="20.5" y="153.0">repository.UserRepository</node>
+    <node x="0.0" y="306.0">web.surgery.SurgeryRestController</node>
+    <node x="0.0" y="79.0">repository.jpa.JpaSurgeryRepositoryImpl</node>
+    <node x="214.0" y="232.0">service.user.UserServiceImpl</node>
+    <node x="165.0" y="380.0">web.MainServlet</node>
+    <node x="252.0" y="0.0">repository.PatientRepository</node>
+    <node x="208.0" y="306.0">web.user.UserRestController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="service.user.UserServiceImpl" target="service.user.UserService">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="repository.jpa.JpaPatientRepositoryImpl" target="repository.PatientRepository">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="repository.jpa.JpaUserRepositoryImpl" target="repository.UserRepository">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="repository.jpa.JpaSurgeryRepositoryImpl" target="repository.SurgeryRepository">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="35.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
