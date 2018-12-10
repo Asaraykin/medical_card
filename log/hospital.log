@@ -2574,3 +2574,106 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: INSERT или UPDATE
 2018-12-06 23:24:54,524 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
 2018-12-06 23:24:54,636 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2018-12-06 23:24:55,698 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-12-08 18:01:20,937 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-12-08 18:01:20,973 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b8a29df, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4fbe37eb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@12a94400, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6a47b187, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2049a9c1]
+2018-12-08 18:01:24,066 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-08 18:01:24,215 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-08 18:01:24,219 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-08 18:01:24,488 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-08 18:01:25,018 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-08 18:01:25,335 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-08 18:01:25,343 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@10a907ec
+2018-12-08 18:01:25,948 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-08 18:01:26,652 INFO  org.hibernate.tuple.PojoInstantiator.<init>:47 - HHH000182: No default (no-argument) constructor for class: model.Patient (class must be instantiated by Interceptor)
+2018-12-08 18:01:27,140 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-08 18:01:27,293 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-08 18:01:28,428 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-12-08 18:02:35,427 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-08 18:02:35,887 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-08 18:02:35,890 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-08 18:02:36,411 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-08 18:02:37,303 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-08 18:02:37,656 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-08 18:02:37,680 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@46814171
+2018-12-08 18:02:38,775 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-08 18:02:39,842 INFO  org.hibernate.tuple.PojoInstantiator.<init>:47 - HHH000182: No default (no-argument) constructor for class: model.Patient (class must be instantiated by Interceptor)
+2018-12-08 18:02:40,736 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-08 18:02:41,020 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-08 18:02:46,175 INFO  web.user.UserRestController.get:37 - 100003
+2018-12-08 18:02:46,640 INFO  web.patient.PatientRestController.getAll:54 - getAll
+2018-12-08 18:02:46,764 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 42703
+2018-12-08 18:02:46,765 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: столбец patient0_.dateofbirth не существует
+  Подсказка: Возможно, предполагалась ссылка на столбец "patient0_.date_of_birth".
+  Позиция: 126
+2018-12-08 18:04:07,587 INFO  web.user.UserRestController.get:37 - 100003
+2018-12-08 18:04:07,671 INFO  web.patient.PatientRestController.getAll:54 - getAll
+2018-12-08 18:04:07,753 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 42703
+2018-12-08 18:04:07,754 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: столбец patient0_.dateofbirth не существует
+  Подсказка: Возможно, предполагалась ссылка на столбец "patient0_.date_of_birth".
+  Позиция: 126
+2018-12-08 18:04:16,527 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-12-08 18:04:21,293 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-08 18:04:21,493 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-08 18:04:21,495 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-08 18:04:21,858 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-08 18:04:22,479 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-08 18:04:22,883 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-08 18:04:22,896 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@184b5b12
+2018-12-08 18:04:23,610 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-08 18:04:24,266 INFO  org.hibernate.tuple.PojoInstantiator.<init>:47 - HHH000182: No default (no-argument) constructor for class: model.Patient (class must be instantiated by Interceptor)
+2018-12-08 18:04:24,948 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-08 18:04:25,164 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-08 18:04:32,249 INFO  web.user.UserRestController.get:37 - 100003
+2018-12-08 18:04:32,603 INFO  web.patient.PatientRestController.getAll:54 - getAll
+2018-12-08 18:05:09,814 INFO  web.user.UserRestController.get:37 - 100003
+2018-12-08 18:05:09,907 INFO  web.patient.PatientRestController.getAll:54 - getAll
+2018-12-08 18:05:12,526 INFO  web.user.UserRestController.get:37 - 100003
+2018-12-08 18:05:12,615 INFO  web.patient.PatientRestController.getAll:54 - getAll
+2018-12-08 18:05:36,269 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-12-08 18:05:42,116 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-08 18:05:42,449 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-08 18:05:42,452 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-08 18:05:42,986 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-08 18:05:44,426 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-08 18:05:45,110 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-08 18:05:45,123 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@357d1986
+2018-12-08 18:05:46,156 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-08 18:05:47,536 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-08 18:05:47,732 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-08 18:06:14,599 INFO  web.user.UserRestController.get:37 - 100003
+2018-12-08 18:06:14,959 INFO  web.patient.PatientRestController.getAll:54 - getAll
+2018-12-08 18:06:52,283 INFO  web.user.UserRestController.get:37 - 100003
+2018-12-08 18:06:52,366 INFO  web.patient.PatientRestController.getAll:54 - getAll
+2018-12-08 18:07:10,739 INFO  web.user.UserRestController.get:37 - 100000
+2018-12-08 18:07:10,820 INFO  web.patient.PatientRestController.get:42 - get 100000
+2018-12-08 18:07:14,475 INFO  web.user.UserRestController.get:37 - 100004
+2018-12-08 18:07:14,557 INFO  web.user.UserRestController.getAll:32 - getAll
+2018-12-08 18:13:19,025 INFO  web.user.UserRestController.get:37 - 100000
+2018-12-08 18:13:19,093 INFO  web.patient.PatientRestController.get:42 - get 100000
+2018-12-08 18:13:24,467 INFO  web.user.UserRestController.get:37 - 100003
+2018-12-08 18:13:24,542 INFO  web.patient.PatientRestController.getAll:54 - getAll
+2018-12-08 18:13:31,309 INFO  web.user.UserRestController.get:37 - 100004
+2018-12-08 18:13:31,383 INFO  web.user.UserRestController.getAll:32 - getAll
+2018-12-08 18:13:46,641 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:597 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-12-10 20:49:14,037 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-10 20:49:14,385 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-10 20:49:14,389 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-10 20:49:14,803 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-10 20:49:15,495 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-10 20:49:15,884 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-10 20:49:15,900 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@cd420b8
+2018-12-10 20:49:16,673 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-10 20:49:18,377 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-10 20:49:18,629 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-10 20:49:23,189 INFO  web.user.UserRestController.get:37 - 100003
+2018-12-10 20:49:23,614 INFO  web.patient.PatientRestController.getAll:54 - getAll

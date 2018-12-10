@@ -16,10 +16,10 @@ INSERT INTO users (login, role, password) VALUES
   ('Doctor1', 'doctor', 'password'),
   ('Admin1', 'admin', 'admin');
 
-INSERT INTO patient(id, name, address, telephone, sex, blood_group)  VALUES
-  (100000, 'Ivanov', 'Kazan', '123456789', 'М', 2),
-  (100001, 'Petrov', 'Moscow', '987654321', 'М', 4),
-  (100002, 'Sidorov', 'Mars', '88888888', 'М', 1);
+INSERT INTO patient(id, name, address, telephone, gender, blood_group, date_of_birth)  VALUES
+  (100000, 'Ivanov', 'Kazan', '123456789', 'М', 2, '1980-05-30 10:00:00'),
+  (100001, 'Petrov', 'Moscow', '987654321', 'М', 4, '1936-05-30 10:00:00'),
+  (100002, 'Sidorov', 'Mars', '88888888', 'М', 1,'1960-05-30 10:00:00');
 
 INSERT INTO surgery(id, date, type, patient_id)  VALUES
   (0, '2015-05-30 10:00:00', 'аппендицит', 100000),

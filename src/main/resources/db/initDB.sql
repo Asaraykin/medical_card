@@ -24,9 +24,10 @@ CREATE TABLE patient
 (
   id               SERIAL PRIMARY KEY     not null ,
   name             VARCHAR                 NOT NULL,
+  date_of_birth    TIMESTAMP               NOT NULL,
   address          VARCHAR                 NOT NULL,
   telephone        VARCHAR                 NULL,
-  sex              VARCHAR                 NOT NULL,
+  gender           VARCHAR                 NOT NULL,
   blood_group      INTEGER                 NULL,
   FOREIGN KEY (id) REFERENCES users(id) ON DELETE CASCADE
 );

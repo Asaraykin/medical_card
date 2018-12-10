@@ -4,6 +4,8 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
+
 @NamedQueries({
         @NamedQuery(name = Patient.GET_ALL, query = "SELECT p FROM Patient p"),
         @NamedQuery(name = Patient.GET, query = "SELECT p FROM Patient p WHERE p.id=:id"),
@@ -34,19 +36,27 @@ public class Patient extends AbstractBaseEntity {
 
     @Column
     @NotBlank
-    private String sex;
+    private String gender;
 
     @Column
     @Pattern(regexp = "[1-4]")
     private int blood_group;
 
-    public Patient(Integer id, @NotBlank @Size(max = 150) String name, @NotBlank @Size(max = 300) String address, @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$") String telephone, @NotBlank String sex, @Pattern(regexp = "[1-4]") int blood_group) {
+    @Column
+    @NotBlank
+    private LocalDateTime date_of_birth;
+
+    public Patient(Integer id, @NotBlank @Size(max = 150) String name, @NotBlank @Size(max = 300) String address, @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$") String telephone, @NotBlank String gender, @Pattern(regexp = "[1-4]") int blood_group, LocalDateTime date_of_birth) {
         super(id);
         this.name = name;
         this.address = address;
         this.telephone = telephone;
-        this.sex = sex;
+        this.gender = gender;
         this.blood_group = blood_group;
+        this.date_of_birth = date_of_birth;
+    }
+
+    public Patient() {
     }
 
     @Override
@@ -54,7 +64,55 @@ public class Patient extends AbstractBaseEntity {
         return  "ФИО: " + name +
                 ", адрес проживания: " + address +
                 ", тел.: " + telephone +
-                ", пол: " + sex +
+                ", пол: " + gender +
                 ", группа крови: " + blood_group;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String sex) {
+        this.gender = sex;
+    }
+
+    public int getBlood_group() {
+        return blood_group;
+    }
+
+    public void setBlood_group(int blood_group) {
+        this.blood_group = blood_group;
+    }
+
+    public LocalDateTime getDate_of_birth() {
+        return date_of_birth;
+    }
+
+    public void setDate_of_birth(LocalDateTime dateOfBirth) {
+        this.date_of_birth = dateOfBirth;
     }
 }
