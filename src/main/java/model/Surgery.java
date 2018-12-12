@@ -9,7 +9,9 @@ import java.time.LocalDateTime;
         @NamedQuery(name = Surgery.GET, query = "SELECT s FROM Surgery s WHERE s.id=:id " +
                 "AND s.patient.id=:patient_id"),
         @NamedQuery(name = Surgery.GET_ALL, query = "SELECT s FROM Surgery s " +
-                "WHERE s.patient.id=:patient_id ORDER BY s.date DESC ")
+                "WHERE s.patient.id=:patient_id ORDER BY s.date DESC "),
+        @NamedQuery(name = Surgery.DELETE, query = "DELETE FROM Surgery s WHERE s.id=:id AND s.patient.id=:patient_id")
+
 })
 
 @Entity
@@ -18,6 +20,7 @@ public class Surgery extends AbstractBaseEntity {
 
     public static final String GET = "Surgery.get";
     public static final String GET_ALL = "Surgery.getAll";
+    public static final String DELETE = "Visit.delete()";
 
     @Column(name = "date", nullable = false)
     @NotBlank

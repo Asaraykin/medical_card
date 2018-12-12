@@ -1,11 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
+    <spring:url value="/css/style.css" var="mainCss" />
+    <link href="${mainCss}" rel="stylesheet" />
 </head>
 <body>
 <h1>Выберите запись</h1>
@@ -15,7 +17,7 @@
         <%--   <jsp:useBean id="user" scope="page" type="model.User"/> --%>
         <tr>
             <td class="td_style">
-                    ${user.getName()}
+                <a href="/patientCard?id=${user.getId()}" >  ${user.getName()}</a>
             </td>
             <td>
                     ${user.getDate_of_birth()}

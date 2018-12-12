@@ -1,7 +1,6 @@
 package web;
 
-import model.AbstractBaseEntity;
-import model.User;
+import model.Patient;
 import org.slf4j.Logger;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -15,11 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-public class MainServlet extends HttpServlet {
+public class CardServlet extends HttpServlet {
+
     private static final Logger log = getLogger(MainServlet.class);
     private ConfigurableApplicationContext springContext;
     private UserRestController userRestController;
@@ -41,34 +40,13 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int userId = Integer.parseInt(request.getParameter("userId"));
-        SecurityUtil.setAuthUserId(userId);
-        request.getRequestDispatcher("/userListForAdmin.jsp").forward(request, response);
+        int  patientId = Integer.parseInt(request.getParameter("id"));
+        request.setAttribute("patient", patientRestController.get(patientId));
+        request.getRequestDispatcher("/patientCard.jsp").forward(request,response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int userId = Integer.parseInt(request.getParameter("userId"));
-        SecurityUtil.setAuthUserId(userId);
-        User authorizedUser = userRestController.get(userId);
-
-        if(authorizedUser.getRole().equals("doctor")){
-            request.setAttribute("userList", patientRestController.getAll());
-            request.getRequestDispatcher("/userList.jsp").forward(request,response);
-        }
-        else {
-
-            if (authorizedUser.getRole().equals("admin")) {
-                request.setAttribute("userList", userRestController.getAll());
-                request.getRequestDispatcher("/userListForAdmin.jsp").forward(request,response);
-            }
-            if (authorizedUser.getRole().equals("patient")) {
-                request.setAttribute("userList", Arrays.asList(patientRestController.get(userId)));
-                request.getRequestDispatcher("/userList.jsp").forward(request,response);
-            }
-
-        }
-
-
+       request.getRequestDispatcher("/patientCard.jsp").forward(request,response);
     }
 }

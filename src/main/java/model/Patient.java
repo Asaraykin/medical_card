@@ -5,6 +5,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @NamedQueries({
         @NamedQuery(name = Patient.GET_ALL, query = "SELECT p FROM Patient p"),
@@ -46,6 +48,22 @@ public class Patient extends AbstractBaseEntity {
     @NotBlank
     private LocalDateTime date_of_birth;
 
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "working",
+            //foreign key for Patient in working table
+            joinColumns = @JoinColumn(name = "patient_id"),
+            //foreign key for other side - WorkPlace in working table
+            inverseJoinColumns = @JoinColumn(name = "work_id"))
+    private Set<WorkPlace> workPlaces = new HashSet<>();
+    public Set<WorkPlace> getWorkPlaces() {
+        return workPlaces;
+    }
+
+    public void setWorkPlaces(Set<WorkPlace> workPlaces) {
+        this.workPlaces = workPlaces;
+    }
+
     public Patient(Integer id, @NotBlank @Size(max = 150) String name, @NotBlank @Size(max = 300) String address, @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$") String telephone, @NotBlank String gender, @Pattern(regexp = "[1-4]") int blood_group, LocalDateTime date_of_birth) {
         super(id);
         this.name = name;
@@ -66,6 +84,10 @@ public class Patient extends AbstractBaseEntity {
                 ", тел.: " + telephone +
                 ", пол: " + gender +
                 ", группа крови: " + blood_group;
+    }
+
+    public void addWorkPlace(WorkPlace workPlace){
+        workPlaces.add(workPlace);
     }
 
     public String getName() {
@@ -115,4 +137,5 @@ public class Patient extends AbstractBaseEntity {
     public void setDate_of_birth(LocalDateTime dateOfBirth) {
         this.date_of_birth = dateOfBirth;
     }
+
 }

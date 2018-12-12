@@ -4,10 +4,10 @@
     <title>Java Enterprise </title>
 </head>
 <body>
-<h3>Проект Java Enterprise </a></h3>
+<h3>Проект Java Enterprise</h3>
 <hr>
-<form method="post" action="main">
-    <b>Meals of&nbsp;</b>
+<form method="post" action="userList">
+    <b>Meals of;</b>
     <select name="userId">
         <option value="100000">User</option>
         <option value="100003">Doctor</option>

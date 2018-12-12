@@ -81,6 +81,6 @@ CREATE TABLE working
 (
   work_id               INTEGER                 not null ,
   patient_id            INTEGER                 NOT NULL,
-  FOREIGN KEY (work_id) REFERENCES work_place(id),
+  FOREIGN KEY (work_id) REFERENCES work_place(id) ON DELETE CASCADE,
   FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE
 );
