@@ -21,6 +21,7 @@
         <tomcat.version>9.0.12</tomcat.version>
 
         <spring.version>5.1.2.RELEASE</spring.version>
+        <spring.securiry>3.2.0.RELEASE</spring.securiry>
 
         <!-- Logging -->
         <logback.version>1.2.3</logback.version>
@@ -89,8 +90,30 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <!--security-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring.securiry}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring.securiry}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring.securiry}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${spring.securiry}</version>
+        </dependency>
 
             <!--Test-->
       <dependency>

@@ -33,6 +33,11 @@ public class RootController {
     private WorkPlaceService workPlaceService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index(Model model){
+        return "index";
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model){
         return "login";
     }
