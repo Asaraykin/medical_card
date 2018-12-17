@@ -1,6 +1,7 @@
 package service.patient;
 
 import model.Patient;
+import model.WorkPlace;
 import util.exception.NotFoundException;
 
 import java.util.List;
@@ -16,6 +17,8 @@ public interface PatientService {
     void update(Patient patient);
 
     List<Patient> getAll();
+
+    void addWorkPlace(WorkPlace workPlace, int patientId);
 
 
 }

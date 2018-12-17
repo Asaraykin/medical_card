@@ -23,12 +23,7 @@ public class WorkPlace extends AbstractBaseEntity{
 
 
 
-    @ManyToMany
-    @JoinTable(name = "working",
-            //foreign key for WorkPlace in working table
-            joinColumns = @JoinColumn(name = "work_id"),
-            //foreign key for other side - Patient in waorking table
-            inverseJoinColumns = @JoinColumn(name = "patient_id"))
+    @ManyToMany(mappedBy = "workPlaces", fetch = FetchType.EAGER)
     private Set<Patient> patientSet = new HashSet<>();
     public Set<Patient> getPatientSet() {
         return patientSet;

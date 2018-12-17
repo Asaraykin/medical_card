@@ -1,7 +1,8 @@
 package repository.jpa;
 
 import model.Patient;
-import model.User;
+
+import model.WorkPlace;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import repository.PatientRepository;
@@ -38,6 +39,12 @@ public class JpaPatientRepositoryImpl implements PatientRepository {
                 .executeUpdate() != 0;
     }
 
+    @Transactional
+    public void addWorkPlace(WorkPlace workPlace, int patientId){
+        Patient patient = em.find(Patient.class, patientId);
+        patient.addWorkPlace(workPlace);
+        em.merge(patient);
+    }
     @Override
     public Patient get(int id) throws NotFoundException {
         return em.find(Patient.class, id);

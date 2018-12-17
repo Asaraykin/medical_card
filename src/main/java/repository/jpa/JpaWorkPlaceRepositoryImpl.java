@@ -2,6 +2,7 @@ package repository.jpa;
 
 import model.WorkPlace;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import repository.WorkPlaceRepository;
 import util.exception.NotFoundException;
 
@@ -16,6 +17,7 @@ public class JpaWorkPlaceRepositoryImpl implements WorkPlaceRepository {
     private EntityManager em;
 
     @Override
+    @Transactional
     public WorkPlace save(WorkPlace workPlace) {
         if(workPlace.isNew()){
             em.persist(workPlace);
@@ -27,6 +29,7 @@ public class JpaWorkPlaceRepositoryImpl implements WorkPlaceRepository {
     }
 
     @Override
+    @Transactional
     public boolean delete(int id) throws NotFoundException {
         return em.createNamedQuery(WorkPlace.DELETE)
                 .setParameter("id", id)

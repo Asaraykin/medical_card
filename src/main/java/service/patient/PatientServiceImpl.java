@@ -1,6 +1,7 @@
 package service.patient;
 
 import model.Patient;
+import model.WorkPlace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -41,6 +42,11 @@ public class PatientServiceImpl implements PatientService {
     public void update(Patient patient) {
         Assert.notNull(patient, "patient should be not null");
         checkNotFoundWithId(repository.save(patient), patient.getId());
+    }
+
+    @Override
+    public void addWorkPlace(WorkPlace workPlace, int patientId) {
+        repository.addWorkPlace(workPlace, patientId);
     }
 
     @Override

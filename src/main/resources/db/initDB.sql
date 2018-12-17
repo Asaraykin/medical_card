@@ -22,7 +22,7 @@ CREATE UNIQUE INDEX users_unique_login_idx ON users (login);
 
 CREATE TABLE patient
 (
-  id               SERIAL PRIMARY KEY     not null ,
+  id               SERIAL PRIMARY KEY      not null ,
   name             VARCHAR                 NOT NULL,
   date_of_birth    TIMESTAMP               NOT NULL,
   address          VARCHAR                 NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE patient
 
 CREATE TABLE surgery
 (
-  id               SERIAL PRIMARY KEY     not null ,
+  id               SERIAL PRIMARY KEY      not null ,
   date             TIMESTAMP               NOT NULL,
   type             VARCHAR                 NOT NULL,
   patient_id       INTEGER                 NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE surgery
 
 CREATE TABLE visit
 (
-  id                       SERIAL PRIMARY KEY     not null ,
+  id                       SERIAL PRIMARY KEY      not null ,
   date                     TIMESTAMP               NOT NULL,
   patient_complaint        VARCHAR                 NOT NULL,
   preliminary_diagnosis    VARCHAR                 NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE visit
 
 CREATE TABLE referral
 (
-  id               SERIAL PRIMARY KEY     not null ,
+  id               SERIAL PRIMARY KEY      not null ,
   date             TIMESTAMP               NOT NULL,
   type             VARCHAR                 NOT NULL,
   visit_id         INTEGER                 NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE referral
 
 CREATE TABLE examination
 (
-  id               SERIAL PRIMARY KEY     not null ,
+  id               SERIAL PRIMARY KEY      not null ,
   date             TIMESTAMP               NOT NULL,
   result           VARCHAR                 NOT NULL,
   referral_id      INTEGER                 NOT NULL,
@@ -73,13 +73,13 @@ CREATE TABLE examination
 
 CREATE TABLE work_place
 (
-  id               SERIAL PRIMARY KEY     not null ,
+  id               SERIAL PRIMARY KEY      not null ,
   name             VARCHAR                 NOT NULL
 );
 
 CREATE TABLE working
 (
-  work_id               INTEGER                 not null ,
+  work_id               INTEGER                 not null,
   patient_id            INTEGER                 NOT NULL,
   FOREIGN KEY (work_id) REFERENCES work_place(id) ON DELETE CASCADE,
   FOREIGN KEY (patient_id) REFERENCES patient(id) ON DELETE CASCADE

@@ -2,6 +2,7 @@ package web;
 
 
 import model.User;
+import model.WorkPlace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import service.patient.PatientService;
 import service.surgery.SurgeryService;
 import service.user.UserService;
+import service.workPlace.WorkPlaceService;
 
 import java.util.Arrays;
 
@@ -26,6 +28,9 @@ public class RootController {
 
     @Autowired
     private SurgeryService surgeryService;
+
+    @Autowired
+    private WorkPlaceService workPlaceService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String login(Model model){
@@ -70,4 +75,19 @@ public class RootController {
         return "userList";
     }
 
+    @GetMapping("/insertWork")
+    public String insertWork(Model model, @RequestParam("id") String id) {
+        int patientId = Integer.parseInt(id);
+        WorkPlace workPlace = new WorkPlace("qwerqweqwde");
+        workPlace = workPlaceService.create(workPlace);
+        int Wid = workPlace.getId();
+        patientService.addWorkPlace(workPlaceService.create(workPlaceService.get(Wid)), patientId);
+        model.addAttribute("userList", patientService.getAll());
+        return "userList";
+    }
+
+    @GetMapping("/test")
+    public String test() {
+        return "test";
+    }
 }

@@ -21,6 +21,7 @@ public class Patient extends AbstractBaseEntity {
     public static final String GET_ALL = "Patient.getAll";
     public static final String GET = "Patient.get";
     public static final String DELETE = "Patient.delete";
+  //  public static final String GET_ALL_WORK_PLACES = "Patient.getAllWorkPlaces";
 
     @Column
     @NotBlank
@@ -49,13 +50,14 @@ public class Patient extends AbstractBaseEntity {
     private LocalDateTime date_of_birth;
 
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "working",
             //foreign key for Patient in working table
             joinColumns = @JoinColumn(name = "patient_id"),
             //foreign key for other side - WorkPlace in working table
             inverseJoinColumns = @JoinColumn(name = "work_id"))
     private Set<WorkPlace> workPlaces = new HashSet<>();
+
     public Set<WorkPlace> getWorkPlaces() {
         return workPlaces;
     }

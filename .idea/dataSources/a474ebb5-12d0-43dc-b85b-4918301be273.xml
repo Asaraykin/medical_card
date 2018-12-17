@@ -88,8 +88,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-12-12.15:16:12.082</IntrospectionTimestamp>
-      <IntrospectionStateNumber>5207</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-12-13.22:12:35.844</IntrospectionTimestamp>
+      <IntrospectionStateNumber>6840</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -136,9 +136,9 @@
       <Type>index</Type>
     </access-method>
     <sequence id="24" parent="17" name="examination_id_seq">
-      <ObjectId>37312</ObjectId>
+      <ObjectId>42972</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5204</StateNumber>
+      <StateNumber>6837</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
@@ -153,103 +153,103 @@
       <DataType>bigint</DataType>
     </sequence>
     <sequence id="26" parent="17" name="global_sequence">
-      <ObjectId>37236</ObjectId>
+      <ObjectId>42896</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5207</StateNumber>
+      <StateNumber>6840</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <sequence id="27" parent="17" name="patient_id_seq">
-      <ObjectId>37248</ObjectId>
+      <ObjectId>42908</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5200</StateNumber>
+      <StateNumber>6833</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="28" parent="17" name="referral_id_seq">
-      <ObjectId>37296</ObjectId>
+      <ObjectId>42956</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5203</StateNumber>
+      <StateNumber>6836</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="29" parent="17" name="surgery_id_seq">
-      <ObjectId>37264</ObjectId>
+      <ObjectId>42924</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5201</StateNumber>
+      <StateNumber>6834</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="30" parent="17" name="visit_id_seq">
-      <ObjectId>37280</ObjectId>
+      <ObjectId>42940</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5202</StateNumber>
+      <StateNumber>6835</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="31" parent="17" name="work_place_id_seq">
-      <ObjectId>37328</ObjectId>
+      <ObjectId>42988</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5205</StateNumber>
+      <StateNumber>6838</StateNumber>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <table id="32" parent="17" name="examination">
-      <ObjectId>37314</ObjectId>
+      <ObjectId>42974</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5204</StateNumber>
+      <StateNumber>6837</StateNumber>
     </table>
     <table id="33" parent="17" name="patient">
-      <ObjectId>37250</ObjectId>
+      <ObjectId>42910</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5206</StateNumber>
+      <StateNumber>6839</StateNumber>
     </table>
     <table id="34" parent="17" name="referral">
-      <ObjectId>37298</ObjectId>
+      <ObjectId>42958</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5204</StateNumber>
+      <StateNumber>6837</StateNumber>
     </table>
     <table id="35" parent="17" name="surgery">
-      <ObjectId>37266</ObjectId>
+      <ObjectId>42926</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5201</StateNumber>
+      <StateNumber>6834</StateNumber>
     </table>
     <table id="36" parent="17" name="users">
-      <ObjectId>37238</ObjectId>
+      <ObjectId>42898</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5200</StateNumber>
+      <StateNumber>6833</StateNumber>
     </table>
     <table id="37" parent="17" name="visit">
-      <ObjectId>37282</ObjectId>
+      <ObjectId>42942</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5203</StateNumber>
+      <StateNumber>6836</StateNumber>
     </table>
     <table id="38" parent="17" name="work_place">
-      <ObjectId>37330</ObjectId>
+      <ObjectId>42990</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5206</StateNumber>
+      <StateNumber>6839</StateNumber>
     </table>
     <table id="39" parent="17" name="working">
-      <ObjectId>37339</ObjectId>
+      <ObjectId>42999</ObjectId>
       <Owner>user</Owner>
-      <StateNumber>5206</StateNumber>
+      <StateNumber>6839</StateNumber>
     </table>
     <column id="40" parent="32" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5204</StateNumber>
+      <StateNumber>6837</StateNumber>
       <DefaultExpression>nextval(&apos;examination_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>examination_id_seq</SequenceName>
@@ -258,38 +258,38 @@
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5204</StateNumber>
+      <StateNumber>6837</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <column id="42" parent="32" name="result">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5204</StateNumber>
+      <StateNumber>6837</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="43" parent="32" name="referral_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5204</StateNumber>
+      <StateNumber>6837</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="44" parent="32" name="examination_pkey">
-      <ObjectId>37321</ObjectId>
+      <ObjectId>42981</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="45" parent="32" name="examination_pkey">
-      <ObjectId>37322</ObjectId>
+      <ObjectId>42982</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>examination_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="46" parent="32" name="examination_referral_id_fkey">
-      <ObjectId>37323</ObjectId>
+      <ObjectId>42983</ObjectId>
       <ColNames>referral_id</ColNames>
-      <RefTableId>37298</RefTableId>
+      <RefTableId>42958</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>referral</RefTableName>
       <RefKeyName>referral_pkey</RefKeyName>
@@ -300,7 +300,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5200</StateNumber>
+      <StateNumber>6833</StateNumber>
       <DefaultExpression>nextval(&apos;patient_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>patient_id_seq</SequenceName>
@@ -309,57 +309,57 @@
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5200</StateNumber>
+      <StateNumber>6833</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="49" parent="33" name="date_of_birth">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5200</StateNumber>
+      <StateNumber>6833</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <column id="50" parent="33" name="address">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5200</StateNumber>
+      <StateNumber>6833</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="51" parent="33" name="telephone">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>5200</StateNumber>
+      <StateNumber>6833</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="52" parent="33" name="gender">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5200</StateNumber>
+      <StateNumber>6833</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="53" parent="33" name="blood_group">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>5200</StateNumber>
+      <StateNumber>6833</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="54" parent="33" name="patient_pkey">
-      <ObjectId>37257</ObjectId>
+      <ObjectId>42917</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="55" parent="33" name="patient_pkey">
-      <ObjectId>37258</ObjectId>
+      <ObjectId>42918</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>patient_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="56" parent="33" name="patient_id_fkey">
-      <ObjectId>37259</ObjectId>
+      <ObjectId>42919</ObjectId>
       <ColNames>id</ColNames>
-      <RefTableId>37238</RefTableId>
+      <RefTableId>42898</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pkey</RefKeyName>
@@ -370,7 +370,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5203</StateNumber>
+      <StateNumber>6836</StateNumber>
       <DefaultExpression>nextval(&apos;referral_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>referral_id_seq</SequenceName>
@@ -379,38 +379,38 @@
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5203</StateNumber>
+      <StateNumber>6836</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <column id="59" parent="34" name="type">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5203</StateNumber>
+      <StateNumber>6836</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="60" parent="34" name="visit_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5203</StateNumber>
+      <StateNumber>6836</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="61" parent="34" name="referral_pkey">
-      <ObjectId>37305</ObjectId>
+      <ObjectId>42965</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="62" parent="34" name="referral_pkey">
-      <ObjectId>37306</ObjectId>
+      <ObjectId>42966</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>referral_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="63" parent="34" name="referral_visit_id_fkey">
-      <ObjectId>37307</ObjectId>
+      <ObjectId>42967</ObjectId>
       <ColNames>visit_id</ColNames>
-      <RefTableId>37282</RefTableId>
+      <RefTableId>42942</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>visit</RefTableName>
       <RefKeyName>visit_pkey</RefKeyName>
@@ -421,7 +421,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5201</StateNumber>
+      <StateNumber>6834</StateNumber>
       <DefaultExpression>nextval(&apos;surgery_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>surgery_id_seq</SequenceName>
@@ -430,38 +430,38 @@
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5201</StateNumber>
+      <StateNumber>6834</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <column id="66" parent="35" name="type">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5201</StateNumber>
+      <StateNumber>6834</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="67" parent="35" name="patient_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5201</StateNumber>
+      <StateNumber>6834</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="68" parent="35" name="surgery_pkey">
-      <ObjectId>37273</ObjectId>
+      <ObjectId>42933</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="69" parent="35" name="surgery_pkey">
-      <ObjectId>37274</ObjectId>
+      <ObjectId>42934</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>surgery_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="70" parent="35" name="surgery_patient_id_fkey">
-      <ObjectId>37275</ObjectId>
+      <ObjectId>42935</ObjectId>
       <ColNames>patient_id</ColNames>
-      <RefTableId>37250</RefTableId>
+      <RefTableId>42910</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>patient</RefTableName>
       <RefKeyName>patient_pkey</RefKeyName>
@@ -472,7 +472,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5198</StateNumber>
+      <StateNumber>6831</StateNumber>
       <DefaultExpression>nextval(&apos;global_sequence&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -480,35 +480,35 @@
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5198</StateNumber>
+      <StateNumber>6831</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="73" parent="36" name="role">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5198</StateNumber>
+      <StateNumber>6831</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="74" parent="36" name="password">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5198</StateNumber>
+      <StateNumber>6831</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="75" parent="36" name="users_pkey">
-      <ObjectId>37245</ObjectId>
+      <ObjectId>42905</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="76" parent="36" name="users_unique_login_idx">
-      <ObjectId>37247</ObjectId>
+      <ObjectId>42907</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="77" parent="36" name="users_pkey">
-      <ObjectId>37246</ObjectId>
+      <ObjectId>42906</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
@@ -517,7 +517,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5202</StateNumber>
+      <StateNumber>6835</StateNumber>
       <DefaultExpression>nextval(&apos;visit_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>visit_id_seq</SequenceName>
@@ -526,59 +526,59 @@
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5202</StateNumber>
+      <StateNumber>6835</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <column id="80" parent="37" name="patient_complaint">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5202</StateNumber>
+      <StateNumber>6835</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="81" parent="37" name="preliminary_diagnosis">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5202</StateNumber>
+      <StateNumber>6835</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="82" parent="37" name="treatment">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5202</StateNumber>
+      <StateNumber>6835</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="83" parent="37" name="diagnosis">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5202</StateNumber>
+      <StateNumber>6835</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="84" parent="37" name="patient_id">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5202</StateNumber>
+      <StateNumber>6835</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="85" parent="37" name="visit_pkey">
-      <ObjectId>37289</ObjectId>
+      <ObjectId>42949</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="86" parent="37" name="visit_pkey">
-      <ObjectId>37290</ObjectId>
+      <ObjectId>42950</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>visit_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="87" parent="37" name="visit_patient_id_fkey">
-      <ObjectId>37291</ObjectId>
+      <ObjectId>42951</ObjectId>
       <ColNames>patient_id</ColNames>
-      <RefTableId>37250</RefTableId>
+      <RefTableId>42910</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>patient</RefTableName>
       <RefKeyName>patient_pkey</RefKeyName>
@@ -589,7 +589,7 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5205</StateNumber>
+      <StateNumber>6838</StateNumber>
       <DefaultExpression>nextval(&apos;work_place_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>work_place_id_seq</SequenceName>
@@ -598,16 +598,16 @@
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5205</StateNumber>
+      <StateNumber>6838</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="90" parent="38" name="work_place_pkey">
-      <ObjectId>37337</ObjectId>
+      <ObjectId>42997</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="91" parent="38" name="work_place_pkey">
-      <ObjectId>37338</ObjectId>
+      <ObjectId>42998</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>work_place_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
@@ -616,20 +616,20 @@
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5206</StateNumber>
+      <StateNumber>6839</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="93" parent="39" name="patient_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>5206</StateNumber>
+      <StateNumber>6839</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="94" parent="39" name="working_work_id_fkey">
-      <ObjectId>37342</ObjectId>
+      <ObjectId>43002</ObjectId>
       <ColNames>work_id</ColNames>
-      <RefTableId>37330</RefTableId>
+      <RefTableId>42990</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>work_place</RefTableName>
       <RefKeyName>work_place_pkey</RefKeyName>
@@ -637,9 +637,9 @@
       <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="95" parent="39" name="working_patient_id_fkey">
-      <ObjectId>37347</ObjectId>
+      <ObjectId>43007</ObjectId>
       <ColNames>patient_id</ColNames>
-      <RefTableId>37250</RefTableId>
+      <RefTableId>42910</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>patient</RefTableName>
       <RefKeyName>patient_pkey</RefKeyName>

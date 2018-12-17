@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Медицинская карта</title>
@@ -17,6 +16,10 @@
    </c:forEach>
 
     <a href="/delete?id=${patient.getId()}">delete</a>
+    <a href="/insertWork?id=${patient.getId()}">insertWork</a>
+    <c:forEach items="${patient.getWorkPlaces()}" var="work">
+        ${work.getName()}
+    </c:forEach>
 
 </div>
 </body>

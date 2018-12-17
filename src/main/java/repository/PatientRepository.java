@@ -1,6 +1,7 @@
 package repository;
 
 import model.Patient;
+import model.WorkPlace;
 import util.exception.NotFoundException;
 
 import java.util.List;
@@ -14,5 +15,5 @@ public interface PatientRepository {
 
     List<Patient> getAll();
 
-
+void addWorkPlace (WorkPlace workPlace, int patientId);
 }
