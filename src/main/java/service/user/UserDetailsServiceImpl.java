@@ -3,7 +3,6 @@ package service.user;
 import model.User;
 import model.UserRoleEnum;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,23 +19,20 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserService userService;
 
-    private static final UserDetailsServiceImpl USER_SERVICE = new UserDetailsServiceImpl();
-
-
-    public static UserDetailsService getUserDetailsService(){
-        return USER_SERVICE;
-    }
-
-
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = userService.getUser("colibri");
+    public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
+        User user = userService.getByLogin(login);
         Set<GrantedAuthority> roles = new HashSet();
-        roles.add(new SimpleGrantedAuthority(UserRoleEnum.USER.name()));
-
+        roles.add(new SimpleGrantedAuthority(user.getRole()));
         UserDetails userDetails =
-                new org.springframework.security.core.userdetails.User(user.getLogin(), user.getPassword(), roles);
-
+                new org.springframework.security.core.userdetails.User(
+                        user.getLogin(),
+                        user.getPassword(),
+                        true,
+                        true,
+                        true,
+                        true,
+                        roles);
         return userDetails;
     }
 

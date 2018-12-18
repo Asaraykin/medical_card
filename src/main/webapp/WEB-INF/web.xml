@@ -35,28 +35,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     
-  <!--  <servlet>
-        <servlet-name>mainServlet</servlet-name>
-        <servlet-class>web.MainServlet</servlet-class>
-        <load-on-startup>0</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>mainServlet</servlet-name>
-        <url-pattern>/main</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>cardServlet</servlet-name>
-        <servlet-class>web.CardServlet</servlet-class>
-        <load-on-startup>0</load-on-startup>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>cardServlet</servlet-name>
-        <url-pattern>/showCard</url-pattern>
-    </servlet-mapping>-->
-
-    <context-param>
+     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
             classpath:spring/spring-app.xml

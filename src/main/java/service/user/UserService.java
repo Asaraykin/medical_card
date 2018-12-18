@@ -20,7 +20,7 @@ public interface UserService {
     List<User> getByRole(String role);
 
 
-     User getUser(String login) ;
+     User getByLogin(String login) ;
 
 }
 

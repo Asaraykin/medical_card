@@ -1,6 +1,8 @@
 package repository.jpa;
 
 import model.User;
+import org.hibernate.jpa.QueryHints;
+import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import repository.UserRepository;
@@ -53,5 +55,14 @@ public class JpaUserRepositoryImpl implements UserRepository {
         return em.createNamedQuery(User.GET_BY_ROLE, User.class)
                 .setParameter("role", role)
                 .getResultList();
+    }
+
+    @Override
+    public User getByLogin(String login) {
+        List<User> users = em.createNamedQuery(User.GET_BY_LOGIN, User.class)
+                .setParameter(1, login)
+                .setHint(QueryHints.HINT_PASS_DISTINCT_THROUGH, false)
+                .getResultList();
+        return DataAccessUtils.singleResult(users);
     }
 }

@@ -14,7 +14,7 @@ CREATE SEQUENCE global_sequence START 100000;
 CREATE TABLE users
 (
   id               INTEGER PRIMARY KEY DEFAULT nextval('global_sequence'),
-  login            VARCHAR                 NOT NULL,
+  login            VARCHAR(255)            NOT NULL,
   role             VARCHAR                 NOT NULL,
   password         VARCHAR                 NOT NULL
 );

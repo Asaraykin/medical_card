@@ -10,11 +10,11 @@ DELETE FROM users;
 ALTER SEQUENCE global_sequence RESTART WITH 100000;
 
 INSERT INTO users (login, role, password) VALUES
-  ('Patient1', 'patient', 'patient1'),
-  ('Patient2', 'patient', 'patient2'),
-  ('Patient3', 'patient', 'patient3'),
-  ('Doctor1', 'doctor', 'password'),
-  ('Admin1', 'admin', 'admin');
+  ('Patient1', 'PATIENT', '{bcrypt}$2a$10$OQ.r/Jb4x0S.nKjLWPtjduz/llyFm8bHDS7fpEaEmDHfBNMETH16W'),
+  ('Patient2', 'PATIENT', 'patient2'),
+  ('Patient3', 'PATIENT', 'patient3'),
+  ('Doctor1', 'DOCTOR', '{bcrypt}$2a$10$9.SyCKdCW.hClNNHdbbx2Ou97RrLt2Ej/itH77jxavVPNhP1q8iS2'),
+  ('Admin1', 'ADMIN', '{bcrypt}$2a$10$9.SyCKdCW.hClNNHdbbx2Ou97RrLt2Ej/itH77jxavVPNhP1q8iS2');
 
 INSERT INTO patient(id, name, address, telephone, gender, blood_group, date_of_birth)  VALUES
   (100000, 'Ivanov', 'Kazan', '123456789', 'М', 2, '1980-05-30 10:00:00'),

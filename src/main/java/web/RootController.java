@@ -1,9 +1,15 @@
 package web;
 
 
+
 import model.User;
+import model.UserRoleEnum;
 import model.WorkPlace;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,31 +38,38 @@ public class RootController {
     @Autowired
     private WorkPlaceService workPlaceService;
 
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentPrincipalName = authentication.getName();
+        if (!currentPrincipalName.equals("anonymousUser")){
+            SecurityUtil.setAuthUserId(userService.getByLogin(currentPrincipalName).getId());
+            model.addAttribute("userId", SecurityUtil.authUserId());
+        }
         return "index";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login(Model model){
+    public String login(){
         return "login";
     }
 
-    @RequestMapping(value = "/userList", method = RequestMethod.POST)
-    public String userList(Model model, @RequestParam("userId") String id){
+    @RequestMapping(value = "/rest/userList", method = RequestMethod.GET)
+    public String userList(Model model, @RequestParam("id") String id){
         int userId = Integer.parseInt(id);
         SecurityUtil.setAuthUserId(userId);
         User authorizedUser = userService.get(userId);
-        if(authorizedUser.getRole().equals("doctor")){
+        if(authorizedUser.getRole().equals(UserRoleEnum.DOCTOR.name())){
             model.addAttribute("userList", patientService.getAll() );
             return "userList";
         }
         else {
-            if (authorizedUser.getRole().equals("admin")) {
-                model.addAttribute("userList", userService.getAll());
+            if (authorizedUser.getRole().equals(UserRoleEnum.ADMIN.name())) {
+               model.addAttribute("userList", userService.getAll());
                 return "userListForAdmin";
             }
-            if (authorizedUser.getRole().equals("patient")) {
+            if (authorizedUser.getRole().equals(UserRoleEnum.PATIENT.name())) {
                 model.addAttribute("userList", Arrays.asList(patientService.get(userId)));
 
             }
@@ -91,8 +104,32 @@ public class RootController {
         return "userList";
     }
 
+
+
     @GetMapping("/test")
-    public String test() {
+    public String test(Model model) {
+        User user = userService.get(100000);
+
+        PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        String rawPassword = "1";
+        user.setPassword(passwordEncoder.encode(rawPassword));
+        String passwordFromDB = user.getPassword();
+        boolean isMatched = passwordEncoder.matches(rawPassword, user.getPassword());
+        model.addAttribute("hashedPassword", rawPassword);
+        model.addAttribute("passwordFromDB", passwordFromDB);
+        model.addAttribute("mathed", isMatched);
+        userService.create(user);
+        if (passwordEncoder.matches(rawPassword, user.getPassword())) {
+            // user password is correct
+            System.out.println("correct");
+        }
+        else{
+            //user password incorrect
+            System.out.println("incorrect");
+        }
         return "test";
     }
+
+
+
 }

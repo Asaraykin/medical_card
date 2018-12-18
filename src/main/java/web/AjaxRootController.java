@@ -1,15 +1,12 @@
 package web;
 
-import model.User;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import service.user.UserService;
-
-import java.util.List;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -22,9 +19,10 @@ public class AjaxRootController {
     @Autowired
     private UserService userService;
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<User> getAll(){
+    @GetMapping(value = "/userList")
+    public String getAll(Model model){
         log.info("getAll");
-        return userService.getAll();
+        model.addAttribute("userList", userService.getAll());
+        return "userListForAdmin";
     }
 }
