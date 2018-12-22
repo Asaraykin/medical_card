@@ -3,6 +3,7 @@ package model;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @NamedQueries({
@@ -23,8 +24,8 @@ public class Surgery extends AbstractBaseEntity {
     public static final String DELETE = "Visit.delete()";
 
     @Column(name = "date", nullable = false)
-    @NotBlank
-    private LocalDateTime date;
+    @NotNull
+    private LocalDate date;
 
     @Column(name = "type", nullable = false)
     @NotBlank
@@ -38,17 +39,17 @@ public class Surgery extends AbstractBaseEntity {
     public Surgery() {
     }
 
-    public Surgery(@NotBlank LocalDateTime localDateTime, @NotBlank String type) {
-        this.date = localDateTime;
+    public Surgery(@NotNull LocalDate localDate, @NotBlank String type) {
+        this.date = localDate;
         this.type = type;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime localDateTime) {
-        this.date = localDateTime;
+    public void setDate(LocalDate localDate) {
+        this.date = localDate;
     }
 
     public String getType() {

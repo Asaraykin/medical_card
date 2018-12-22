@@ -19,16 +19,12 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(securedEnabled = true)
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 @ComponentScan({"service"})
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-
-
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
-
-
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

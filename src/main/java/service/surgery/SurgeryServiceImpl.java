@@ -2,6 +2,7 @@ package service.surgery;
 
 import model.Surgery;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import repository.SurgeryRepository;
@@ -21,18 +22,20 @@ public class SurgeryServiceImpl implements SurgeryService {
         this.repository = repository;
     }
 
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'DOCTOR')")
     @Override
     public Surgery create(Surgery surgery, int patientId) {
         Assert.notNull(surgery, "surgery should not be null");
         return repository.save(surgery, patientId);
     }
 
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'DOCTOR')")
     @Override
     public void update(Surgery surgery, int patientId) throws NotFoundException {
         Assert.notNull(surgery, "surgery should not be null");
         checkNotFoundWithId(repository.save(surgery, patientId), surgery.getId());
     }
-
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'DOCTOR')")
     @Override
     public void delete(int id, int patientId) throws NotFoundException {
         checkNotFoundWithId(repository.delete(id, patientId), id);

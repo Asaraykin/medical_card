@@ -4,6 +4,7 @@ import model.Patient;
 import model.Surgery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import repository.SurgeryRepository;
 import util.exception.NotFoundException;
 
@@ -18,6 +19,7 @@ public class JpaSurgeryRepositoryImpl implements SurgeryRepository {
     private EntityManager em;
 
     @Override
+    @Transactional
     public Surgery save(Surgery surgery, int patientId) {
         if(surgery.isNew()){
             Patient ref = em.getReference(Patient.class, patientId);
@@ -38,6 +40,7 @@ public class JpaSurgeryRepositoryImpl implements SurgeryRepository {
     }
 
     @Override
+    @Transactional
     public boolean delete(int id, int patientId) throws NotFoundException {
        return em.createNamedQuery(Surgery.DELETE)
                .setParameter("id", id)

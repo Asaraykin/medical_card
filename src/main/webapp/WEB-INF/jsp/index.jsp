@@ -21,8 +21,7 @@
 <body>
 <jsp:include page="fragments/bodyHeader.jsp"/>
 
-<div class="container">
-
+<div class="container" style="margin-top: 70px;">
     <div class="jumbotron" style="margin-top: 20px;">
         <h1><spring:message code="app.title"/> </h1>
         <p class="lead">
@@ -38,14 +37,17 @@
         </sec:authorize>
         <sec:authorize access="isAuthenticated()">
             <p><a href="/rest/editUser?id=${userId}"> Редактировать профиль: <sec:authentication property="principal.username" /></a></p>
-            <p><a href="/rest/userList?id=${userId}"> Посмотреть медицинские карты</a></p>
+            <p><a href="/userList?id=${userId}"> Учетные записи</a></p>
+            <sec:authorize access="hasAuthority('DOCTOR')">
+
+            </sec:authorize>
+
             <p><a class="btn btn-lg btn-danger" href="<c:url value="/logout" />" role="button">Выйти</a></p>
         </sec:authorize>
     </div>
 
-    <div class="footer">
-        <jsp:include page="fragments/footer.jsp"/>
-    </div>
-
+</div>
+<div class="footer" style="text-align: center;">
+    <jsp:include page="fragments/footer.jsp"/>
 </div>
 </body>

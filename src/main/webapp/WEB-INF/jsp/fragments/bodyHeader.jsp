@@ -11,11 +11,17 @@
             <p><a class="btn btn-lg btn-success" href="<c:url value="/login" />" role="button">Войти</a></p>
         </sec:authorize>
         <sec:authorize access="isAuthenticated()">
-            <p>Ваш логин: <sec:authentication property="principal.username" /></p>
-            <p><a class="btn btn-lg btn-danger" href="<c:url value="/logout" />" role="button">Выйти</a></p>
+            <div class="nav-item">
+                <a class="btn btn-info mr-1" href="profile">Вы вошли как <sec:authentication property="principal.username" /></a>
+                    <%--<p style="color:#cbcbcb">Вы вошли как <sec:authentication property="principal.username" /></p>--%>
+                <a class="btn btn-primary" href="<c:url value="/logout"/>" role="button">
+                    <span class="fa fa-sign-out"> <a  href="<c:url value="/logout" />"/></span>
+                </a>
+               <%-- <a class="btn btn-lg btn-danger" href="<c:url value="/logout" />" role="button">Выйти</a>--%>
+            </div>
+
 
 
         </sec:authorize>
     </div>
 </nav>
-<br><br>

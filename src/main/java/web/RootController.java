@@ -7,21 +7,18 @@ import model.UserRoleEnum;
 import model.WorkPlace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import service.patient.PatientService;
 import service.surgery.SurgeryService;
 import service.user.UserService;
 import service.workPlace.WorkPlaceService;
-
-import java.util.Arrays;
+import util.exception.NotFoundException;
 
 @Controller
 public class RootController {
@@ -55,34 +52,32 @@ public class RootController {
         return "login";
     }
 
-    @RequestMapping(value = "/rest/userList", method = RequestMethod.GET)
-    public String userList(Model model, @RequestParam("id") String id){
-        int userId = Integer.parseInt(id);
+    @RequestMapping(value = "/userList", method = RequestMethod.GET)
+    public String userList(Model model, @RequestParam("id") int userId){
         SecurityUtil.setAuthUserId(userId);
         User authorizedUser = userService.get(userId);
-        if(authorizedUser.getRole().equals(UserRoleEnum.DOCTOR.name())){
-            model.addAttribute("userList", patientService.getAll() );
-            return "userList";
+        if(authorizedUser.getRole().equals(UserRoleEnum.ADMIN.name())){
+           return "userListForAdmin";
         }
         else {
-            if (authorizedUser.getRole().equals(UserRoleEnum.ADMIN.name())) {
-               model.addAttribute("userList", userService.getAll());
-                return "userListForAdmin";
-            }
-            if (authorizedUser.getRole().equals(UserRoleEnum.PATIENT.name())) {
-                model.addAttribute("userList", Arrays.asList(patientService.get(userId)));
-
-            }
+            model.addAttribute("id", userId);
             return "userList";
         }
     }
 
-    @GetMapping("/patientCard")
-    public String patientCard(Model model, @RequestParam("id") String id){
-        int patientId = Integer.parseInt(id);
-        model.addAttribute("patient", patientService.get(patientId));
-        model.addAttribute("surgery", surgeryService.getAll(patientId));
+    @GetMapping("/rest/patient")
+    public String patientCard(Model model, @RequestParam("id") int id){
+        model.addAttribute("id", id);
         return "patientCard";
+    }
+
+    @GetMapping(value = "/rest/surgery")
+    public String getSurgery(@RequestParam(value = "id", required = false) Integer id, @RequestParam("userId") int userId, Model model) throws NotFoundException {
+       if (id != null) {
+           model.addAttribute("surgery", surgeryService.get(id, userId));
+       }
+        model.addAttribute("patientId", userId);
+        return "surgery";
     }
 
     @GetMapping("/delete")

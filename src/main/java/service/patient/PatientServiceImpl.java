@@ -3,6 +3,7 @@ package service.patient;
 import model.Patient;
 import model.WorkPlace;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import repository.PatientRepository;
@@ -28,6 +29,7 @@ public class PatientServiceImpl implements PatientService {
         return repository.save(patient);
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @Override
     public void delete(int id) throws NotFoundException {
         checkNotFoundWithId(repository.delete(id), id);

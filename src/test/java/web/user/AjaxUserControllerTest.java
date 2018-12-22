@@ -23,7 +23,7 @@ import static web.UserTestData.*;
 
 @RunWith(SpringRunner.class)
 @Sql(scripts = "classpath:db/populateDB.sql", config = @SqlConfig(encoding = "UTF-8"))
-public class UserRestControllerTest {
+public class AjaxUserControllerTest {
 
     static {
         // Only for postgres driver logging

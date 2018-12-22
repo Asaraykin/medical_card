@@ -9,7 +9,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <jsp:include page="fragments/headTag.jsp"/>
-    <%--<link rel="stylesheet" href="resources/css/signin.css">--%>
 
     <title><spring:message code="app.title"/> </title>
 
@@ -20,7 +19,7 @@
 <body class="text-center">
 <jsp:include page="fragments/bodyHeader.jsp"/>
 <br><br>
-<div class="container" style="width: 300px;">
+<div class="container" style="width: 300px; margin-top: 70px;">
 <c:url value="/j_spring_security_check" var="loginUrl" />
 <form class="form-signin" action="${loginUrl}" method="post">
 

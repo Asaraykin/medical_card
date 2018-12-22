@@ -3,7 +3,7 @@ package model;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @NamedQueries({
         @NamedQuery(name = Visit.GET_ALL, query = "SELECT v FROM Visit v WHERE v.patient.id=:patient_id ORDER BY v.date DESC")//,
@@ -18,8 +18,7 @@ public class Visit extends AbstractBaseEntity{
     public final static String DELETE = "Visit.delete()";
 
     @Column(name = "date", nullable = false)
-    @NotBlank
-    private LocalDateTime date;
+    private @NotNull LocalDate date;
 
     @Column(name = "patient_complaint", nullable = false)
     @NotBlank
@@ -44,7 +43,7 @@ public class Visit extends AbstractBaseEntity{
     public Visit() {
     }
 
-    public Visit(@NotBlank LocalDateTime date, @NotBlank String patientComplaint, String preliminaryDiagnosis, @NotBlank String treatment, @NotBlank String diagnosis) {
+    public Visit(@NotNull LocalDate date, @NotBlank String patientComplaint, String preliminaryDiagnosis, @NotBlank String treatment, @NotBlank String diagnosis) {
         this.date = date;
         this.patientComplaint = patientComplaint;
         this.preliminaryDiagnosis = preliminaryDiagnosis;
@@ -52,11 +51,11 @@ public class Visit extends AbstractBaseEntity{
         this.diagnosis = diagnosis;
     }
 
-    public LocalDateTime getDate() {
+    public @NotNull LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(@NotNull LocalDate date) {
         this.date = date;
     }
 

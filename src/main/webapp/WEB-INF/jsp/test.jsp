@@ -1,24 +1,48 @@
-<html lang="en"><head>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Signin Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="webjars/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Custom styles for this template -->
-        <link href="resources/css/style.css" rel="stylesheet">
-
-    <%--   <jsp:include page="fragments/headTag.jsp"/>--%>
+    <jsp:include page="fragments/headTag.jsp"/>
+    <link rel="stylesheet" href="resources/css/dataTables.css">
 </head>
 
-<body class="text-center">
-<p>hashedPassword: ${hashedPassword}</p>
-<p>passwordFromDB: ${passwordFromDB}</p>
+<body>
+<script type="text/javascript" src="resources/js/tables.js" defer></script>
+<jsp:include page="fragments/bodyHeader.jsp"/>
 
-<p>mathces function: ${mathed}</p>
+<div class="container" style="margin-bottom: 70px; margin-top: 50px;">
+    <table id="adminList" class="display" style="width:100%">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Логин</th>
+            <th>Пароль</th>
+            <th>Роль</th>
+            <th>Удалить</th>
+            <th>Редактировать</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <th>ID</th>
+            <th>Логин</th>
+            <th>Пароль</th>
+            <th>Роль</th>
+            <th>Удалить</th>
+            <th>Редактировать</th>
+        </tr>
+        </tfoot>
+    </table>
 
-</body></html>
+    <div class="footer">
+        <jsp:include page="fragments/footer.jsp"/>
+    </div>
+</div>
+</body>

@@ -1,42 +1,54 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <head>
-    <title>Title</title>
-   <jsp:include page="fragments/headTag.jsp"/>
-    <link href="${mainCss}" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <jsp:include page="fragments/headTag.jsp"/>
+    <link rel="stylesheet" href="resources/css/dataTables.css">
 </head>
-<body>
-<jsp:include page="fragments/bodyHeader.jsp"/>
 
-<table class=table_borders align="center">
-    <h1 align="center">Выберите запись</h1>
-    <tr><td>id</td><td>Имя</td><td>Дата рождения</td><td>Адрес</td><td></td></tr>
-    <c:forEach items="${userList}" var="user">
-        <%--   <jsp:useBean id="user" scope="page" type="model.User"/> --%>
+<body>
+
+<script type="text/javascript" src="resources/js/common.js" defer></script>
+<script type="text/javascript" src="resources/js/userTables.js" defer></script>
+<jsp:include page="fragments/bodyHeader.jsp"/>
+<p></p>
+<div class="container" style="margin-bottom: 70px; margin-top: 50px;">
+    <table id="userList" class="display" style="width:100%">
+        <thead>
         <tr>
-            <td class="td_style">
-                <a href="/patientCard?id=${user.getId()}" >  ${user.getName()}</a>
-            </td>
-            <td>
-                    ${user.getDate_of_birth()}
-            </td>
-            <td>
-                    ${user.getAddress()}
-            </td>
-            <td>
-                <a href="" >delete</a>
-            </td>
-            <td>
-                update
-            </td>
+            <td>Имя</td>
+            <td>Дата рождения</td>
+            <td>Адрес</td>
+            <td>Телефон</td>
+            <th>Открыть</th>
+            <th>Редактировать</th>
         </tr>
-    </c:forEach>
-</table>
-<div class="footer">
+        </thead>
+        <tfoot>
+        <tr>
+            <td>Имя</td>
+            <td>Дата рождения</td>
+            <td>Адрес</td>
+            <td>Телефон</td>
+            <th>Открыть</th>
+            <th>Редактировать</th>
+        </tr>
+        </tfoot>
+    </table>
+
+
+</div>
+<div class="footer" style="text-align: center;">
     <jsp:include page="fragments/footer.jsp"/>
 </div>
 </body>
-
+<jsp:include page="fragments/i18n.jsp">
+    <jsp:param name="page" value="userList"/>
+</jsp:include>

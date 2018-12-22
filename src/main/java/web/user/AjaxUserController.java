@@ -2,35 +2,49 @@ package web.user;
 
 import model.Patient;
 import model.User;
+import model.UserRoleEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import service.user.UserService;
-import web.patient.PatientRestController;
+import web.SecurityUtil;
+import web.patient.PatientAjaxRestController;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static util.ValidationUtil.assureIdConsistent;
 import static util.ValidationUtil.checkNew;
 
-@Controller
-public class UserRestController {
+@RestController
+@RequestMapping("/rest/")
+public class AjaxUserController {
     protected final Logger log = LoggerFactory.getLogger(getClass());
 
     private UserService userService;
-    private PatientRestController patientRestController;
+    private PatientAjaxRestController patientAjaxRestController;
 
 
     @Autowired
-    public UserRestController(UserService userService, PatientRestController patientRestController) {
+    public AjaxUserController(UserService userService, PatientAjaxRestController patientAjaxRestController) {
         this.userService = userService;
-        this.patientRestController = patientRestController;
+        this.patientAjaxRestController = patientAjaxRestController;
     }
 
-    public List<User> getAll() {
-        log.info("getAll");
-        return userService.getAll();
+    @GetMapping(value = "/userList", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Patient> getUsers() {
+        log.info("getUsers");
+        int id = SecurityUtil.authUserId();
+        if(userService.get(id).getRole().equals(UserRoleEnum.DOCTOR.name())){
+            return patientAjaxRestController.getAll();
+        }
+       else {
+           return Arrays.asList(patientAjaxRestController.get(id));
+        }
     }
 
     public User get(int id){
@@ -51,7 +65,7 @@ public class UserRestController {
         log.info("create {}", user);
         checkNew(user);
         User newUser = userService.create(user);
-        patientRestController.create(patient);
+        patientAjaxRestController.create(patient);
         return newUser;
     }
 

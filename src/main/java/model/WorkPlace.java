@@ -1,5 +1,7 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.HashSet;
@@ -24,6 +26,7 @@ public class WorkPlace extends AbstractBaseEntity{
 
 
     @ManyToMany(mappedBy = "workPlaces", fetch = FetchType.EAGER)
+    @JsonBackReference
     private Set<Patient> patientSet = new HashSet<>();
     public Set<Patient> getPatientSet() {
         return patientSet;

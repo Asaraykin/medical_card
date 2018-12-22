@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="webjars/noty/3.1.4/demo/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="webjars/datatables/1.10.19/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="webjars/noty/3.1.4/lib/noty.css"/>
-    <link rel="stylesheet" href="webjars/datetimepicker/jquery.datetimepicker.css">
+   <%-- <link rel="stylesheet" href="webjars/datetimepicker/jquery.datetimepicker.css">--%>
 
     <%--http://stackoverflow.com/a/24070373/548473--%>
     <script type="text/javascript" src="webjars/jquery/3.3.1-1/jquery.min.js" defer></script>

@@ -1,9 +1,12 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -47,15 +50,17 @@ public class Patient extends AbstractBaseEntity {
 
     @Column
     @NotBlank
-    private LocalDateTime date_of_birth;
+    private LocalDate date_of_birth;
 
-
+    //TODO eager or lazy which is better
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "working",
             //foreign key for Patient in working table
             joinColumns = @JoinColumn(name = "patient_id"),
             //foreign key for other side - WorkPlace in working table
             inverseJoinColumns = @JoinColumn(name = "work_id"))
+    //https://stackoverflow.com/questions/41407921/eliminate-circular-json-in-java-spring-many-to-many-relationship
+    @JsonManagedReference
     private Set<WorkPlace> workPlaces = new HashSet<>();
 
     public Set<WorkPlace> getWorkPlaces() {
@@ -66,7 +71,7 @@ public class Patient extends AbstractBaseEntity {
         this.workPlaces = workPlaces;
     }
 
-    public Patient(Integer id, @NotBlank @Size(max = 150) String name, @NotBlank @Size(max = 300) String address, @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$") String telephone, @NotBlank String gender, @Pattern(regexp = "[1-4]") int blood_group, LocalDateTime date_of_birth) {
+    public Patient(Integer id, @NotBlank @Size(max = 150) String name, @NotBlank @Size(max = 300) String address, @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$") String telephone, @NotBlank String gender, @Pattern(regexp = "[1-4]") int blood_group, LocalDate date_of_birth) {
         super(id);
         this.name = name;
         this.address = address;
@@ -132,11 +137,11 @@ public class Patient extends AbstractBaseEntity {
         this.blood_group = blood_group;
     }
 
-    public LocalDateTime getDate_of_birth() {
+    public LocalDate getDate_of_birth() {
         return date_of_birth;
     }
 
-    public void setDate_of_birth(LocalDateTime dateOfBirth) {
+    public void setDate_of_birth(LocalDate dateOfBirth) {
         this.date_of_birth = dateOfBirth;
     }
 
