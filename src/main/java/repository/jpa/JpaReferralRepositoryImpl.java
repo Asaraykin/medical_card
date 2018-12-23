@@ -21,7 +21,7 @@ public class JpaReferralRepositoryImpl implements ReferralRepository {
     @Transactional
     public Referral save(Referral referral, int visitId) {
         Visit ref = em.getReference(Visit.class, visitId);
-        if(!referral.isNew() && referral.getVisit().getId() != visitId){
+        if(!referral.isNew() && get(referral.getId(), visitId) == null){
             return null;
         }
         else {

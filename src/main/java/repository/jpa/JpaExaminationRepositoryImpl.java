@@ -18,9 +18,8 @@ public class JpaExaminationRepositoryImpl implements ExaminationRepository {
     private EntityManager em;
 
     @Override
-    @Transactional
     public Examination save(Examination examination, int referralId) {
-        if(!examination.isNew() && examination.getReferral().getId() != referralId){
+        if(!examination.isNew() && get(examination.getId(), referralId) == null){
             return null;
         }
         else {
@@ -38,7 +37,6 @@ public class JpaExaminationRepositoryImpl implements ExaminationRepository {
     }
 
     @Override
-    @Transactional
     public boolean delete(int id, int referralId) throws NotFoundException {
         return em.createNamedQuery(Examination.DELETE)
                 .setParameter("id", id)
@@ -49,7 +47,7 @@ public class JpaExaminationRepositoryImpl implements ExaminationRepository {
     @Override
     public Examination get(int id, int referralId) throws NotFoundException {
         Examination examination = em.find(Examination.class, id);
-        return examination == null && examination.getReferral().getId() != referralId ? null : examination;
+        return  examination == null && examination.getReferral().getId() != referralId ? null : examination;
     }
 
     @Override

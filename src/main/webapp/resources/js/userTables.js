@@ -1,7 +1,6 @@
-var ajaxUrl = "ajax/rest";
+let ajaxUrl = "ajax/rest";
 $(document).ready(function() {
     $.ajax({
-
         'url':  '/rest/userList',
         'method': 'GET',
         'dataType': 'json'
@@ -67,14 +66,12 @@ $(document).ready(function() {
                 return nRow;
             }
         });
-        successNoty("common.saved");
-     console.log(data);
     });
 
 });
 
 
-function showRow(id) {
+/*function showRow(id) {
     $.ajax({
         'url': ajaxUrl + "/patientCard" + id,
         'method': 'GET',
@@ -83,7 +80,7 @@ function showRow(id) {
         .done(function (data) {
             $('#userList').dataTable({})
         });
-}
+}*/
 
 
 

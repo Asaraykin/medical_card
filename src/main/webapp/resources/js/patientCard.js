@@ -1,7 +1,9 @@
 const id = $("body").attr("patientId");
+let ajaxUrl = '/rest/patient/patientCard/'
+
 $(document).ready(function () {
     $.ajax({
-        'url': '/rest/patient/patientCard?id=' + id,
+        'url': ajaxUrl + '?id=' + id,
         'method': 'GET',
         'dataType': 'json'
     }).done(function (list) {
@@ -49,7 +51,7 @@ function fill(list) {
             }],
            "fnRowCallback": function (nRow, aData, iDisplayIndex) {
                $(nRow).click(function() {
-                   window.location.href = "/rest/surgery?id=" + aData.id + "&userId=" + id;
+                   window.location.href = "/rest/surgery?id=" + aData.id + "&patientId=" + id;
                });
                return nRow;
            }
@@ -80,7 +82,7 @@ function fill(list) {
             }],
         "fnRowCallback": function (nRow, aData, iDisplayIndex) {
             $(nRow).click(function() {
-                window.location.href = "/rest/surgery?id=" + aData.id + "&userId=" + id;
+                window.location.href = "/rest/visit?id=" + aData.id + "&patientId=" + id;
             });
             return nRow;
         }
@@ -88,10 +90,10 @@ function fill(list) {
 };
 
 
-$("#surgeries").click(function () {
+/*$("#surgeries").click(function () {
     $('#surgeriesEdit').modal({
         keyboard: true
     })
-});
+});*/
 
 

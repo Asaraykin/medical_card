@@ -3,13 +3,14 @@ package model;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+
 @NamedQueries({
-        @NamedQuery(name = Examination.DELETE, query = "DELETE FROM Examination x WHERE x.id=:id AND x.referral.id=:referral_id"),
-        @NamedQuery(name = Examination.GET_ALL, query = "SELECT x FROM Examination x " +
-                "WHERE x.referral.id=:referral_id ORDER BY x.date DESC")
+        @NamedQuery(name = Examination.DELETE, query = "DELETE FROM Examination x WHERE x.id=:id AND x.referral.id=:referral_id "),
+        @NamedQuery(name = Examination.GET_ALL, query = "SELECT x FROM Examination x WHERE x.referral.id=:referral_id ORDER BY x.date DESC")
 })
 
+//TODO
 @Entity
 @Table(name = "examination", uniqueConstraints = {@UniqueConstraint(columnNames = {"id"})})
 public class Examination extends AbstractBaseEntity {
@@ -18,31 +19,31 @@ public class Examination extends AbstractBaseEntity {
     public final static String DELETE = "Examination.delete()";
 
     @Column(name = "date")
-    @NotBlank
-    private LocalDateTime date;
+    @NotNull
+    private  LocalDate date;
 
     @Column(name = "result")
     @NotBlank
     private String result;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @NotNull
+    @OneToOne
     @JoinColumn(name = "referral_id")
     private Referral referral;
+
 
     public Examination() {
     }
 
-    public Examination(@NotBlank LocalDateTime date, @NotBlank String result) {
+    public Examination(@NotNull LocalDate date, @NotBlank String result) {
         this.date = date;
         this.result = result;
     }
 
-    public LocalDateTime getDate() {
+    public @NotNull LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(@NotNull LocalDate date) {
         this.date = date;
     }
 

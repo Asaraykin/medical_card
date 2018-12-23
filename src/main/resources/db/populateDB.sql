@@ -42,6 +42,11 @@ INSERT INTO referral(id, date, type, visit_id) VALUES
 (1, '2014-05-30 10:00:00', 'общий анализ крови2', 1),
 (2, '2013-05-30 10:00:00', 'общий анализ крови3', 2);
 
+/*INSERT INTO examination (id, date, result)
+VALUES (0, '2017-05-30 10:00:00', 'повышен сахар');
+*/
+
+
 INSERT INTO examination(id, date, result, referral_id) VALUES
 (0, '2017-05-30 10:00:00', 'повышен сахар', 0);
 

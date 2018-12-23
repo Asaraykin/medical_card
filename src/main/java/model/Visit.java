@@ -6,8 +6,8 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @NamedQueries({
-        @NamedQuery(name = Visit.GET_ALL, query = "SELECT v FROM Visit v WHERE v.patient.id=:patient_id ORDER BY v.date DESC")//,
-       // @NamedQuery(name = Visit.DELETE, query = "DELETE FROM Visit v WHERE v.id=:id AND v.patient.id=:patient_id")
+        @NamedQuery(name = Visit.GET_ALL, query = "SELECT v FROM Visit v WHERE v.patient.id=:patient_id ORDER BY v.date DESC"),
+        @NamedQuery(name = Visit.DELETE, query = "DELETE FROM Visit v WHERE v.id=:id AND v.patient.id=:patient_id")
 })
 
 @Entity

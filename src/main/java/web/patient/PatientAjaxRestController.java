@@ -67,13 +67,13 @@ public class PatientAjaxRestController {
         map.put("patient", patientService.get(id));
         map.put("surgeries", surgeryService.getAll(id));
         map.put("visits", visitService.getAll(id));
-        String f = "";
+        String JSONmapOfObjects = "";
         try {
-            f = mapper.writeValueAsString(map);
-            System.out.println(f);
+            JSONmapOfObjects = mapper.writeValueAsString(map);
+            System.out.println(JSONmapOfObjects);
         } catch (JsonProcessingException t) {
         }
-        return f;
+        return JSONmapOfObjects;
     }
 
     public void update(Patient patient, int id) {

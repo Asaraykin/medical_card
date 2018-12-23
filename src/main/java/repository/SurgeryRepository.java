@@ -8,7 +8,7 @@ import java.util.List;
 public interface SurgeryRepository {
     Surgery save(Surgery surgery, int patientId);
 
-    // false if surgery do not belong to userId
+    // false if surgery do not belong to parentId
     boolean delete(int id, int patientId) throws NotFoundException;
 
     Surgery get(int id, int patientId) throws NotFoundException;

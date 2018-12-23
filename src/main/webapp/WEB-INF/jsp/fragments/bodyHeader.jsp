@@ -10,6 +10,9 @@
         <sec:authorize access="!isAuthenticated()">
             <p><a class="btn btn-lg btn-success" href="<c:url value="/login" />" role="button">Войти</a></p>
         </sec:authorize>
+        <%--TODO delete test
+        --%>
+        <a href="/test">test</a>
         <sec:authorize access="isAuthenticated()">
             <div class="nav-item">
                 <a class="btn btn-info mr-1" href="profile">Вы вошли как <sec:authentication property="principal.username" /></a>

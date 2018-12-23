@@ -17,25 +17,22 @@ public class JpaVisitRepositoryImpl implements VisitRepository {
     @PersistenceContext
     private EntityManager em;
 
-    @Transactional
     @Override
     public Visit save(Visit visit, int patientId) {
-        if(!visit.isNew() && visit.getPatient().getId() != patientId) {
-        return null;
+        if (!visit.isNew() && get(visit.getId(), patientId) == null) {
+            return null;
         }
-        if(visit.isNew()) {
-            Patient patient = em.getReference(Patient.class, patientId);
+        Patient patient = em.getReference(Patient.class, patientId);
+        if (visit.isNew()) {
             visit.setPatient(patient);
             em.persist(visit);
             return visit;
+        } else {
+            visit.setPatient(patient);
+            return em.merge(visit);
         }
-      else {
-            em.merge(visit);
-        }
-        return null;
     }
 
-    @Transactional
     @Override
     public boolean delete(int id, int patientId) throws NotFoundException {
         return em.createNamedQuery(Visit.DELETE)

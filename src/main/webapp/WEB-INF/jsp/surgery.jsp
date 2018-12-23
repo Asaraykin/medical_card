@@ -18,32 +18,32 @@
 <jsp:include page="fragments/bodyHeader.jsp"/>
 <div class="container" style="margin-bottom: 70px;">
     <div class="jumbotron" style="margin-top: 70px;">
-        <form id="detailsForm" >
+        <form id="detailsForm" class="needs-validation" novalidate onsubmit="return checkAndSave()">
             <input type="hidden" name="id"  id="id" readonly value="${surgery.getId()}">
-            <input type="hidden" name="patientId" id="patientId" readonly value="${patientId}">
+            <input type="hidden" name="parentId" id="parentId" readonly value="${patientId}">
             <div class="container" style="width: 300px;">
             <div class="col-md-12 mb-2" style="text-align: center">
                 <label for="date">Дата проведения операции</label>
                 <input type="date" class="form-control" name="date" id="date" required="" value="${surgery.getDate()}">
                 <div class="invalid-feedback">
-                    Please enter your shipping address.
+                    Введите дату.
                 </div>
             </div>
         </div>
         <div class="container" style="width: 800px; text-align: center">
             <div class="col-md-12 mb-3">
                 <label for="type">Описание</label>
-                <textarea class="form-control" name="type" id="type" rows="8">${surgery.getType()}</textarea>
+                <textarea class="form-control" name="type" id="type" rows="8" required="required">${surgery.getType()}</textarea>
                 <div class="invalid-feedback">
-                    Please enter your shipping address.
+                  Введите описание хирургического вмешательства.
                 </div>
             </div>
             <div>
                 <button type="button" class="btn btn-secondary" onclick="back()">Обратно</button>
-                <button type="button" class="btn btn-danger" onclick="deleteSurgery('delete')">Удалить</button>
-                <button type="button" class="btn btn-primary" onclick="save()">Сохранить</button>
-
-
+                <c:if test="${!empty surgery.getId()}">
+                    <button type="button" class="btn btn-danger" onclick="deleteEntity('delete')">Удалить</button>
+                </c:if>
+                <button type="submit" class="btn btn-primary" >Сохранить</button>
             </div>
         </div>
         </form>

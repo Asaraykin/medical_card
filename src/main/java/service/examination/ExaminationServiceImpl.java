@@ -3,6 +3,7 @@ package service.examination;
 import model.Examination;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 import repository.ExaminationRepository;
 import util.exception.NotFoundException;
@@ -18,24 +19,27 @@ public class ExaminationServiceImpl implements ExaminationService {
     private ExaminationRepository repository;
 
     @Override
+    @Transactional
     public Examination create(Examination examination, int referralId) {
         Assert.notNull(examination, "examination should not be null");
         return repository.save(examination, referralId);
     }
 
     @Override
+    @Transactional
     public void update(Examination examination, int referralId) throws NotFoundException {
         checkNotFoundWithId(repository.save(examination, referralId), examination.getId());
     }
 
     @Override
+    @Transactional
     public void delete(int id, int referralId) throws NotFoundException {
         checkNotFoundWithId(repository.delete(id, referralId), id);
     }
 
     @Override
     public Examination get(int id, int referralId) throws NotFoundException {
-        return checkNotFoundWithId(repository.get(id, referralId), id);
+        return repository.get(id, referralId);
     }
 
     @Override

@@ -3,10 +3,10 @@ package model;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @NamedQueries({
-        @NamedQuery(name = Referral.GET_ALL, query = "SELECT r FROM Referral r WHERE r.visit=:visit_id order by r.date DESC"),
+        @NamedQuery(name = Referral.GET_ALL, query = "SELECT r FROM Referral r WHERE r.visit.id=:visit_id order by r.date DESC"),
         @NamedQuery(name = Referral.DELETE, query = "DELETE FROM Referral r WHERE r.id=:id AND r.visit.id=:visit_id")
 })
 
@@ -18,8 +18,7 @@ public class Referral extends AbstractBaseEntity {
     public final static String DELETE = "Referral.delete()";
 
     @Column(name = "date")
-    @NotBlank
-    private LocalDateTime date;
+    private @NotNull LocalDate date;
 
     @Column(name = "type")
     @NotBlank
@@ -30,19 +29,22 @@ public class Referral extends AbstractBaseEntity {
     @NotNull
     private Visit visit;
 
+  /*  @OneToOne(fetch = FetchType.LAZY)
+    private Examination examination;
+*/
     public Referral() {
     }
 
-    public Referral(@NotBlank LocalDateTime date, @NotBlank String type) {
+    public Referral(@NotNull LocalDate date, @NotBlank String type) {
         this.date = date;
         this.type = type;
     }
 
-    public LocalDateTime getDate() {
+    public @NotNull LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(@NotNull LocalDate date) {
         this.date = date;
     }
 

@@ -62,6 +62,15 @@ CREATE TABLE referral
   FOREIGN KEY (visit_id) REFERENCES visit(id) ON DELETE CASCADE
 );
 
+/*CREATE TABLE examination
+(
+  id     INTEGER      not null,
+  date   TIMESTAMP               NOT NULL,
+  result VARCHAR                 NOT NULL,
+
+  FOREIGN KEY (id) REFERENCES referral (id) ON DELETE CASCADE
+);*/
+
 CREATE TABLE examination
 (
   id               SERIAL PRIMARY KEY      not null ,

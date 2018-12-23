@@ -21,7 +21,7 @@ public class Surgery extends AbstractBaseEntity {
 
     public static final String GET = "Surgery.get";
     public static final String GET_ALL = "Surgery.getAll";
-    public static final String DELETE = "Visit.delete()";
+    public static final String DELETE = "Surgery.delete()";
 
     @Column(name = "date", nullable = false)
     @NotNull
