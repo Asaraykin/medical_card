@@ -1,5 +1,7 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -26,8 +28,10 @@ public class Examination extends AbstractBaseEntity {
     @NotBlank
     private String result;
 
-    @OneToOne
-    @JoinColumn(name = "referral_id")
+    @JoinColumn(name = "id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @MapsId
+    @JsonBackReference
     private Referral referral;
 
 

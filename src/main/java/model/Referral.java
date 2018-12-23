@@ -1,5 +1,7 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -29,9 +31,11 @@ public class Referral extends AbstractBaseEntity {
     @NotNull
     private Visit visit;
 
-  /*  @OneToOne(fetch = FetchType.LAZY)
-    private Examination examination;
-*/
+  @OneToOne(cascade = CascadeType.ALL, mappedBy = "referral")
+  @JsonManagedReference
+  private Examination examination;
+
+
     public Referral() {
     }
 

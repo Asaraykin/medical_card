@@ -50,6 +50,7 @@ public class VisitAjaxRestController {
             JSONmapOfObjects = mapper.writeValueAsString(map);
             System.out.println(JSONmapOfObjects);
         } catch (JsonProcessingException t) {
+            System.out.println(t.getMessage());
         }
         System.out.println(JSONmapOfObjects);
         return JSONmapOfObjects;

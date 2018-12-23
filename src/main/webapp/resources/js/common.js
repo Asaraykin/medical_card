@@ -17,8 +17,8 @@ function save() {
             200: function (data) {
             },
             500: function (data) {
-                console.log();
-                if (data.responseText.indexOf('More than one row with the given identifier was found') > 0) {
+               // console.log(data.responseText);
+                if (data.responseText.indexOf('повторяющееся значение ключа нарушает ограничение уникальности') > 0) {
                     failNoty('У этого направления уже существует запись результатов');
                 }
             },

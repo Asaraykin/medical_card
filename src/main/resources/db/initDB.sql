@@ -76,7 +76,7 @@ CREATE TABLE examination
   id               SERIAL PRIMARY KEY      not null ,
   date             TIMESTAMP               NOT NULL,
   result           VARCHAR                 NOT NULL,
-  referral_id      INTEGER                 NOT NULL,
+  referral_id      INTEGER                  NULL,
   FOREIGN KEY (referral_id) REFERENCES referral(id) ON DELETE CASCADE
 );
 
