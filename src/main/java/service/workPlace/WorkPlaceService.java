@@ -15,4 +15,6 @@ public interface WorkPlaceService {
     void update(WorkPlace workPlace);
 
     List<WorkPlace> getAll();
+
+
 }

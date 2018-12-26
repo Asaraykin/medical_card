@@ -22,7 +22,7 @@ CREATE UNIQUE INDEX users_unique_login_idx ON users (login);
 
 CREATE TABLE patient
 (
-  id               SERIAL PRIMARY KEY      not null ,
+  id               INTEGER PRIMARY KEY     not null ,
   name             VARCHAR                 NOT NULL,
   date_of_birth    TIMESTAMP               NOT NULL,
   address          VARCHAR                 NOT NULL,
@@ -77,12 +77,12 @@ CREATE TABLE examination
   date             TIMESTAMP               NOT NULL,
   result           VARCHAR                 NOT NULL,
   referral_id      INTEGER                  NULL,
-  FOREIGN KEY (referral_id) REFERENCES referral(id) ON DELETE CASCADE
+  FOREIGN KEY (id) REFERENCES referral(id) ON DELETE CASCADE
 );
 
 CREATE TABLE work_place
 (
-  id               SERIAL PRIMARY KEY      not null ,
+  id               SERIAL PRIMARY KEY      not null,
   name             VARCHAR                 NOT NULL
 );
 

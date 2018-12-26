@@ -18,4 +18,5 @@ public interface UserRepository {
     List<User> getByRole(String role);
 
     User getByLogin(String login);
+
 }

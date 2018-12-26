@@ -16,4 +16,6 @@ public interface PatientRepository {
     List<Patient> getAll();
 
 void addWorkPlace (WorkPlace workPlace, int patientId);
+
+    void removeWorkPlace (WorkPlace workPlace, int patientId);
 }

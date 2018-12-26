@@ -1,3 +1,9 @@
+let id;
+let authorizedUserId = $("#userId").val();
+let ajaxUrl = '/rest/admin/userList';
+let parentId = 0;
+
+
 $(document).ready(function() {
     $.ajax({
         'url':  '/rest/admin/userList',
@@ -29,17 +35,22 @@ $(document).ready(function() {
             },
             "aaData": data,
             "columns": [
-                { "data": "id" },
-                { "data": "login" },
-                { "data": "password" },
-                { "data": "role" },
-                {
+                { title: "ID","data": "id" },
+                { title: "Логин","data": "login" },
+                /*{title: "Пароль", "data": "password" },*/
+                { title: "Роль","data": "role" },
+                {title: "Редактировать",
                     "render": renderEditBtn,
                     "defaultContent": "",
                     "orderable": false
                 },
-                {
+                {title: "Удалить",
                     "render": renderDeleteBtn,
+                    "defaultContent": "",
+                    "orderable": false
+                },
+                {title:"Добавить пациента",
+                    "render": renderAddPatientBtn,
                     "defaultContent": "",
                     "orderable": false
                 },
@@ -49,29 +60,61 @@ $(document).ready(function() {
             ],
             'columnDefs': [
                 {
-                    "targets": 4, // your case first column
+                    "targets": 3, // your case first column
                     "className": "text-center"
+                },
+                {
+                    "targets": 4,
+                    "className": "text-center",
                 },
                 {
                     "targets": 5,
                     "className": "text-center",
                 }],
+            "fnRowCallback": function (nRow, aData, iDisplayIndex) {
+                // Bind click event
+                $(nRow).click(function() {
+                    id = aData.id;
+                    renderDeleteBtn();
+                    renderEditBtn();
+                    renderAddPatientBtn();
+                });
+                return nRow;
+            }
         })
     })
 } );
 
 
+function deleteUser(){
+    if(authorizedUserId == id){
+        failNoty("Нельзя удалить самого себя")
+    }
+    else {
+        deleteEntity();
+       // console.log(id);
+    }
+}
+
+function editUser(){
+    console.log("edit");
+    window.location.href = "/profile/" + id;
+
+}
+
+function addPatient() {
+    window.location.href = "/rest/patient?id=" + id;
+}
+function renderAddPatientBtn(data, type, row) {
+    if (type === "display") {
+        return "<a href='javascript:addPatient()'><span class='fa fa-plus-square'></span></a>";
+    }
+}
 
 
 
-
-$.ajax({
-    url: '/rest/admin/userList',
-    type: 'GET',
-    dataType: 'json',
-    success: [function(data) {
-
-        // data argument is the result you want
-        console.log(data);
-    }]
-});
+function renderEditBtn(data, type, row) {
+    if (type === "display") {
+        return "<a href='javascript:editUser()'><span class='fa fa-pencil'></span></a>";
+    }
+}

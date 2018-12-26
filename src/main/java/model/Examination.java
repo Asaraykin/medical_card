@@ -29,7 +29,7 @@ public class Examination extends AbstractBaseEntity {
     private String result;
 
     @JoinColumn(name = "id")
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
     @MapsId
     @JsonBackReference
     private Referral referral;

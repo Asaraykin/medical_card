@@ -10,17 +10,12 @@
         <sec:authorize access="!isAuthenticated()">
             <p><a class="btn btn-lg btn-success" href="<c:url value="/login" />" role="button">Войти</a></p>
         </sec:authorize>
-        <%--TODO delete test
-        --%>
-        <a href="/test">test</a>
-        <sec:authorize access="isAuthenticated()">
+           <sec:authorize access="isAuthenticated()">
             <div class="nav-item">
-                <a class="btn btn-info mr-1" href="profile">Вы вошли как <sec:authentication property="principal.username" /></a>
-                    <%--<p style="color:#cbcbcb">Вы вошли как <sec:authentication property="principal.username" /></p>--%>
+                <a class="btn btn-info mr-1" href="/profile">Вы вошли как <sec:authentication property="principal.username" /></a>
                 <a class="btn btn-primary" href="<c:url value="/logout"/>" role="button">
                     <span class="fa fa-sign-out"> <a  href="<c:url value="/logout" />"/></span>
                 </a>
-               <%-- <a class="btn btn-lg btn-danger" href="<c:url value="/logout" />" role="button">Выйти</a>--%>
             </div>
 
 

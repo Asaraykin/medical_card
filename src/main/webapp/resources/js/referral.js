@@ -19,7 +19,7 @@ function updateTable(data) {
     $("#date").val(data.date);
     $("#type").val(data.type);
     $("#id").val(data.id);
-    console.log(form.serialize());
+  //  console.log(form.serialize());
 }
 
 function fill(list) {

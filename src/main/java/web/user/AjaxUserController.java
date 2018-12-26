@@ -39,7 +39,7 @@ public class AjaxUserController {
     public List<Patient> getUsers() {
         log.info("getUsers");
         int id = SecurityUtil.authUserId();
-        if(userService.get(id).getRole().equals(UserRoleEnum.DOCTOR.name())){
+        if(userService.get(id).getRole().equals(UserRoleEnum.DOCTOR.name()) || userService.get(id).getRole().equals(UserRoleEnum.ADMIN.name())){
             return patientAjaxRestController.getAll();
         }
        else {
@@ -47,31 +47,6 @@ public class AjaxUserController {
         }
     }
 
-    public User get(int id){
-        log.info(String.valueOf(id));
-        return userService.get(id);
-    }
 
-    public List<User> getByRole(String role){
-        log.info("getByRole");
-        return userService.getByRole(role);
-    }
 
-    public User create(User user){
-        return userService.create(user);
-    }
-
-    public User create(User user, Patient patient){
-        log.info("create {}", user);
-        checkNew(user);
-        User newUser = userService.create(user);
-        patientAjaxRestController.create(patient);
-        return newUser;
-    }
-
-    public void update(User user, int id) {
-        log.info("update {} with id={}", user, id);
-        assureIdConsistent(user, id);
-        userService.update(user);
-    }
 }

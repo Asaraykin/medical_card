@@ -65,4 +65,6 @@ public class JpaUserRepositoryImpl implements UserRepository {
                 .getResultList();
         return DataAccessUtils.singleResult(users);
     }
+
+
 }

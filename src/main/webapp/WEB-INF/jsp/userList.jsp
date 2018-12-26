@@ -20,28 +20,7 @@
 <jsp:include page="fragments/bodyHeader.jsp"/>
 <p></p>
 <div class="container" style="margin-bottom: 70px; margin-top: 50px;">
-    <table id="userList" class="display" style="width:100%">
-        <thead>
-        <tr>
-            <td>Имя</td>
-            <td>Дата рождения</td>
-            <td>Адрес</td>
-            <td>Телефон</td>
-            <th>Открыть</th>
-            <th>Редактировать</th>
-        </tr>
-        </thead>
-        <tfoot>
-        <tr>
-            <td>Имя</td>
-            <td>Дата рождения</td>
-            <td>Адрес</td>
-            <td>Телефон</td>
-            <th>Открыть</th>
-            <th>Редактировать</th>
-        </tr>
-        </tfoot>
-    </table>
+    <table id="userList" class="display" style="width:100%"></table>
 
 
 </div>

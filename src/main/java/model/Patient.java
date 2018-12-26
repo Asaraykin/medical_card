@@ -1,9 +1,13 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.validator.constraints.Range;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
@@ -24,7 +28,15 @@ public class Patient extends AbstractBaseEntity {
     public static final String GET_ALL = "Patient.getAll";
     public static final String GET = "Patient.get";
     public static final String DELETE = "Patient.delete";
-  //  public static final String GET_ALL_WORK_PLACES = "Patient.getAllWorkPlaces";
+
+
+    @Id
+    private Integer id;
+
+    @OneToOne
+    @JoinColumn(name = "id")
+    private User user;
+
 
     @Column
     @NotBlank
@@ -37,7 +49,7 @@ public class Patient extends AbstractBaseEntity {
     private String address;
 
     @Column
-    @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$")
+  //  @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$")
     private String telephone;
 
     @Column
@@ -45,11 +57,11 @@ public class Patient extends AbstractBaseEntity {
     private String gender;
 
     @Column
-    @Pattern(regexp = "[1-4]")
+   // @Range(min = 1, max = 4)
     private int blood_group;
 
     @Column
-    @NotBlank
+    @NotNull
     private LocalDate date_of_birth;
 
     //TODO eager or lazy which is better
@@ -63,8 +75,30 @@ public class Patient extends AbstractBaseEntity {
     @JsonManagedReference
     private Set<WorkPlace> workPlaces = new HashSet<>();
 
+    @Override
+    public void setId(Integer id) {
+this.id = id;    }
+
+    @Override
+    public Integer getId() {
+        return this.id;
+    }
+
+    @Override
+    public boolean isNew() {
+        return this.id == null;
+    }
+
     public Set<WorkPlace> getWorkPlaces() {
         return workPlaces;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public void setWorkPlaces(Set<WorkPlace> workPlaces) {
@@ -95,6 +129,9 @@ public class Patient extends AbstractBaseEntity {
 
     public void addWorkPlace(WorkPlace workPlace){
         workPlaces.add(workPlace);
+    }
+    public void removeWorkPlace(WorkPlace workPlace){
+        workPlaces.remove(workPlace);
     }
 
     public String getName() {

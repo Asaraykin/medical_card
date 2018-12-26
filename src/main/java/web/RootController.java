@@ -62,7 +62,8 @@ public class RootController {
     public String userList(Model model, @RequestParam("id") int userId){
         SecurityUtil.setAuthUserId(userId);
         User authorizedUser = userService.get(userId);
-        if(authorizedUser.getRole().equals(UserRoleEnum.ADMIN.name())){
+        if(authorizedUser.getRole().equals(UserRoleEnum.ADMIN.name()) || authorizedUser.getRole().equals(UserRoleEnum.DOCTOR.name())){
+            model.addAttribute("userId", SecurityUtil.authUserId());
            return "userListForAdmin";
         }
         else {
@@ -71,8 +72,18 @@ public class RootController {
         }
     }
 
+    @RequestMapping(value = "/patientListForAdmin", method = RequestMethod.GET)
+    public String patientListForAdmin(Model model, @RequestParam("id") int userId){
+            model.addAttribute("id", userId);
+            return "userList";
+    }
+
+
     @GetMapping("/rest/patient")
-    public String patientCard(Model model, @RequestParam("id") int id){
+    public String patientCard(Model model, @RequestParam(value = "id", required = false) Integer id){
+        if(userService.get(id).getPatient() == null) {
+            model.addAttribute("noPatient", true);
+        }
         model.addAttribute("id", id);
         return "patientCard";
     }
@@ -118,6 +129,15 @@ public class RootController {
         return "examination";
     }
 
+    @GetMapping(value = "/rest/patientWorkPlaces")
+    public String editPatientWorkPlaces(@RequestParam(value = "id") Integer id,
+                                 Model model) throws NotFoundException {
+        model.addAttribute("workPlaces", patientService.get(id).getWorkPlaces());
+        model.addAttribute("patientId", id);
+        return "patientWorkPlaces";
+    }
+
+
 
 
 
@@ -141,7 +161,17 @@ public class RootController {
         return "userList";
     }
 
+    @GetMapping(value = "/profile/{id}")
+    public String editProfile(Model model, @PathVariable("id") int id){
+        model.addAttribute("userId", id);
+        return "profile";
+    }
 
+    @GetMapping(value = "/profile")
+    public String editMyProfile(Model model){
+        model.addAttribute("userId", SecurityUtil.authUserId());
+        return "profile";
+    }
 
     @GetMapping("/test")
     public String test(Model model) {

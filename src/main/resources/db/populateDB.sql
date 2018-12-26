@@ -11,8 +11,8 @@ ALTER SEQUENCE global_sequence RESTART WITH 100000;
 
 INSERT INTO users (login, role, password) VALUES
   ('Patient1', 'PATIENT', '{bcrypt}$2a$10$OQ.r/Jb4x0S.nKjLWPtjduz/llyFm8bHDS7fpEaEmDHfBNMETH16W'),
-  ('Patient2', 'PATIENT', 'patient2'),
-  ('Patient3', 'PATIENT', 'patient3'),
+  ('Patient2', 'PATIENT', '{bcrypt}$2a$10$OQ.r/Jb4x0S.nKjLWPtjduz/llyFm8bHDS7fpEaEmDHfBNMETH16W'),
+  ('Patient3', 'PATIENT', '{bcrypt}$2a$10$OQ.r/Jb4x0S.nKjLWPtjduz/llyFm8bHDS7fpEaEmDHfBNMETH16W'),
   ('Doctor1', 'DOCTOR', '{bcrypt}$2a$10$9.SyCKdCW.hClNNHdbbx2Ou97RrLt2Ej/itH77jxavVPNhP1q8iS2'),
   ('Admin1', 'ADMIN', '{bcrypt}$2a$10$9.SyCKdCW.hClNNHdbbx2Ou97RrLt2Ej/itH77jxavVPNhP1q8iS2');
 
@@ -42,19 +42,15 @@ INSERT INTO referral(id, date, type, visit_id) VALUES
 (1, '2014-05-30 10:00:00', 'общий анализ крови2', 1),
 (2, '2013-05-30 10:00:00', 'общий анализ крови3', 2);
 
-/*INSERT INTO examination (id, date, result)
-VALUES (0, '2017-05-30 10:00:00', 'повышен сахар');
-*/
-
 
 INSERT INTO examination(id, date, result, referral_id) VALUES
 (0, '2017-05-30 10:00:00', 'повышен сахар', 0);
 
 INSERT INTO work_place(id, name) VALUES
 (0, 'ПАО Оргсинтез'),
-(1, 'ПАО "Камаз"');
-
+(277777, 'ПАО Камаз'),
+(1, 'ПАО Рога и копыта');
 INSERT INTO working(work_id, patient_id) VALUES
 (0,100000),
-(0, 100001),
+(277777, 100000),
 (1, 100002);

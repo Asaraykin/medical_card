@@ -1,11 +1,31 @@
+
+//field validation
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        let forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+    }, false)
+}());
+
+
 function checkAndSave() {
     save();
     return false;
 }
 
 function save() {
-    console.log(id);
-    $.ajax({
+      $.ajax({
         url: ajaxUrl + '/update' + "?" + parentURL + "Id=" + parentId,
         type: 'POST',
         data: form.serialize(),
@@ -17,7 +37,6 @@ function save() {
             200: function (data) {
             },
             500: function (data) {
-               // console.log(data.responseText);
                 if (data.responseText.indexOf('повторяющееся значение ключа нарушает ограничение уникальности') > 0) {
                     failNoty('У этого направления уже существует запись результатов');
                 }
@@ -29,7 +48,7 @@ function save() {
                 successNoty('common.saved')
         }
     );
-};
+}
 
 
 function deleteEntity() {
@@ -57,7 +76,7 @@ function deleteEntity() {
                         //other codes. read the docs for more details
                     }
                 }).done(function () {
-                        console.log("done")
+                        console.log("done");
                         back()
                     }
                 );
@@ -80,8 +99,10 @@ function failNoty(errorInfo) {
     failedNote = new Noty({
         text: "<span class='fa fa-lg fa-exclamation-circle'></span> &nbsp;" + errorInfo,
         type: "error",
-        layout: "bottomRight"
+        layout: "bottomRight",
+        timeout: 1000
     }).show();
+
 }
 
 function closeNoty() {
@@ -103,19 +124,13 @@ function successNoty(key) {
 
 function renderEditBtn(data, type, row) {
     if (type === "display") {
-        return "<a onclick='updateRow(" + row.id + ");'><span class='fa fa-pencil'></span></a>";
+        return "<a href='' ;'><span class='fa fa-pencil'></span></a>";
     }
 }
 
 function renderDeleteBtn(data, type, row) {
     if (type === "display") {
-        return "<a onclick='deleteRow(" + row.id + ");'><span class='fa fa-remove'></span></a>";
-    }
-}
-
-function renderShowBtn(data, type, row) {
-    if (type === "display") {
-        return "<a onclick='showRow(" + row.id + ");'><span class='fa fa-list-alt'></span></a>";
+        return "<a href='javascript:deleteUser("+ id +")'><span class='fa fa-remove'></span></a>";
     }
 }
 
@@ -123,24 +138,4 @@ function back() {
     parent.history.back();
     return false;
 }
-
-
-//field validation
-(function () {
-    'use strict';
-    window.addEventListener('load', function () {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        let forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated')
-            }, false)
-        })
-    }, false)
-}());
 

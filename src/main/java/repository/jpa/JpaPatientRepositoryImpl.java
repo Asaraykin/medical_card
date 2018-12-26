@@ -20,7 +20,6 @@ public class JpaPatientRepositoryImpl implements PatientRepository {
     private EntityManager em;
 
     @Override
-    @Transactional
     public Patient save(Patient patient) {
         if(patient.isNew()){
             em.persist(patient);
@@ -32,14 +31,19 @@ public class JpaPatientRepositoryImpl implements PatientRepository {
     }
 
     @Override
-    @Transactional
     public boolean delete(int id) throws NotFoundException {
         return em.createNamedQuery(Patient.DELETE)
                 .setParameter("id", id)
                 .executeUpdate() != 0;
     }
 
-    @Transactional
+    @Override
+    public void removeWorkPlace(WorkPlace workPlace, int patientId) {
+        Patient patient = em.find(Patient.class, patientId);
+        patient.removeWorkPlace(workPlace);
+    }
+
+   @Override
     public void addWorkPlace(WorkPlace workPlace, int patientId){
         Patient patient = em.find(Patient.class, patientId);
         patient.addWorkPlace(workPlace);

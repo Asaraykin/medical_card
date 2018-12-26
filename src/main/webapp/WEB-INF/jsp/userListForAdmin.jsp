@@ -17,30 +17,10 @@
 <script type="text/javascript" src="resources/js/common.js" defer></script>
 <script type="text/javascript" src="resources/js/adminTables.js" defer></script>
 <jsp:include page="fragments/bodyHeader.jsp"/>
+<input type="hidden" id="userId" name="userId" value="${userId}">
 
 <div class="container" style="margin-bottom: 70px; margin-top: 50px;">
-    <table id="adminList" class="display" style="width:100%">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Логин</th>
-            <th>Пароль</th>
-            <th>Роль</th>
-            <th>Удалить</th>
-            <th>Редактировать</th>
-        </tr>
-        </thead>
-        <tfoot>
-        <tr>
-            <th>ID</th>
-            <th>Логин</th>
-            <th>Пароль</th>
-            <th>Роль</th>
-            <th>Удалить</th>
-            <th>Редактировать</th>
-        </tr>
-        </tfoot>
-    </table>
+    <table id="adminList" class="display" style="width:100%"></table>
 
 </div>
 <div class="footer" style="text-align: center;">

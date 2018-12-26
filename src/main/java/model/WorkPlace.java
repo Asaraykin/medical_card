@@ -13,7 +13,7 @@ import java.util.Set;
 })
 
 @Entity
-@Table(name = "work_place", uniqueConstraints = {@UniqueConstraint(columnNames = {"id"})})
+@Table(name = "work_place", uniqueConstraints = {@UniqueConstraint(columnNames = {"id", "name"})})
 public class WorkPlace extends AbstractBaseEntity{
 
     public final static String DELETE = "WorkPlace.delete()";

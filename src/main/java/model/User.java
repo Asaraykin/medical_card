@@ -1,8 +1,15 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+
+import static javax.persistence.GenerationType.IDENTITY;
 
 @NamedQueries({
         @NamedQuery(name = User.DELETE, query = "DELETE FROM User u WHERE u.id=:id"),
@@ -28,11 +35,38 @@ public class User extends AbstractBaseEntity{
     @Column(name = "password", nullable = false)
     @NotBlank
     @Size(min = 1, max = 100)
+    @JsonIgnore
     private String password;
 
     @Column(name = "role", nullable = false)
     @NotBlank
     private String role;
+
+
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    private Integer id;
+
+    @PrimaryKeyJoinColumn
+    @OneToOne
+    @JsonBackReference
+    private Patient patient;
+
+    @Override
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Override
+    public Integer getId() {
+        return this.id;
+    }
+
+    @Override
+    public boolean isNew() {
+        return this.id == null;
+    }
 
     public User() {
     }
@@ -55,6 +89,14 @@ public class User extends AbstractBaseEntity{
 
     public String getRole() {
         return role;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
     }
 
     public User(@NotBlank @Size(max = 100) String login, @NotBlank @Size(min = 5, max = 100) String password, @NotBlank String role) {

@@ -12,10 +12,8 @@ public abstract class AbstractBaseEntity {
     @SequenceGenerator(name = "global_sequence", sequenceName = "global_sequence", allocationSize = 1, initialValue = START_SEQ)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_sequence")
     protected Integer id;
-
     protected AbstractBaseEntity() {
     }
-
     protected AbstractBaseEntity(Integer id) {
         this.id = id;
     }
@@ -36,7 +34,6 @@ public abstract class AbstractBaseEntity {
     public String toString() {
         return String.format("Entity %s (%s)", getClass().getName(), id);
     }
-
 
     @Override
     public boolean equals(Object o) {

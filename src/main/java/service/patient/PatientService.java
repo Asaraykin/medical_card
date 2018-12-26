@@ -20,6 +20,7 @@ public interface PatientService {
 
     void addWorkPlace(WorkPlace workPlace, int patientId);
 
+    void removeWorkPlace(WorkPlace workPlace, int patientId);
 
 }
 

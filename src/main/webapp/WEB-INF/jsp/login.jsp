@@ -29,11 +29,6 @@
     <input type="text" name="j_username" class="form-control" placeholder="Email address" >
     <label class="sr-only">Пароль</label>
     <input type="password" name="j_password" class="form-control" placeholder="Password" >
-  <%--  <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> Remember me
-        </label>
-    </div>--%>
     <button class="btn btn-lg btn-primary btn-block" type="submit"><spring:message code="app.enter"/> </button>
     <p class="mt-5 mb-3 text-muted">© 2018-2019</p>
 </form>

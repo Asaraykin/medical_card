@@ -2,6 +2,7 @@ package service.examination;
 
 import model.Examination;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -20,6 +21,7 @@ public class ExaminationServiceImpl implements ExaminationService {
 
     @Override
     @Transactional
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'DOCTOR')")
     public Examination create(Examination examination, int referralId) {
         Assert.notNull(examination, "examination should not be null");
         return repository.save(examination, referralId);
@@ -27,12 +29,14 @@ public class ExaminationServiceImpl implements ExaminationService {
 
     @Override
     @Transactional
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'DOCTOR')")
     public void update(Examination examination, int referralId) throws NotFoundException {
         checkNotFoundWithId(repository.save(examination, referralId), examination.getId());
     }
 
     @Override
     @Transactional
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'DOCTOR')")
     public void delete(int id, int referralId) throws NotFoundException {
         checkNotFoundWithId(repository.delete(id, referralId), id);
     }

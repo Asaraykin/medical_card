@@ -1,4 +1,6 @@
-let ajaxUrl = "ajax/rest";
+let ajaxUrl = '/rest/patient';
+let id = 0;
+let parentId = 0;
 $(document).ready(function() {
     $.ajax({
         'url':  '/rest/userList',
@@ -30,17 +32,17 @@ $(document).ready(function() {
         },
             "aaData": data,
             "columns": [
-                { "data": "name"},
-                { "data": "date_of_birth" },
-                { "data": "address" },
-                { "data": "telephone" },
+                { title: "name", "data": "name"},
+                { title: "date_of_birth","data": "date_of_birth" },
+                { title: "address","data": "address" },
+                { title: "telephone","data": "telephone" },
                 {
-                    "render": renderShowBtn,
+                    title: "Открыть/Редактировать","render": renderEditBtn,
                     "defaultContent": "",
                     "orderable": false
                 },
                 {
-                    "render": renderEditBtn,
+                    title: "Удалить","render": renderDeleteBtn,
                     "defaultContent": "",
                     "orderable": false
                 },
@@ -58,42 +60,33 @@ $(document).ready(function() {
                     "className": "text-center",
                 }],
             "fnRowCallback": function (nRow, aData, iDisplayIndex) {
-
-                // Bind click event
                 $(nRow).click(function() {
-                    window.location.href = "/rest/patient?id=" + aData.id;
+                    id = aData.id;
+                    renderDeleteBtn(aData, "display", nRow);
+                    renderEditBtn(aData, "display", nRow);
+                    /*window.location.href = "/rest/patient?id=" + aData.id;;*/
                 });
                 return nRow;
             }
         });
     });
-
 });
 
 
-/*function showRow(id) {
-    $.ajax({
-        'url': ajaxUrl + "/patientCard" + id,
-        'method': 'GET',
-        'dataType': 'json'
-    })
-        .done(function (data) {
-            $('#userList').dataTable({})
-        });
-}*/
+function deleteUser(id){
+          deleteEntity();
+        //console.log(id);
 
+}
 
+function editUser(id){
+    window.location.href = "/rest/patient?id=" + id;
+}
 
+function renderEditBtn(data, type, row) {
+    if (type === "display") {
+        let id = row.id;
+        return "<a href='javascript:editUser("+id+")'><span class='fa fa-pencil'></span></a>";
+    }
+}
 
-
-
-$.ajax({
-    url: '/rest/userList',
-    type: 'GET',
-    dataType: 'json',
-    success: [function(data) {
-
-        // data argument is the result you want
-
-    }]
-});

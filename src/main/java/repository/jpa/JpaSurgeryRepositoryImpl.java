@@ -42,10 +42,10 @@ public class JpaSurgeryRepositoryImpl implements SurgeryRepository {
     @Override
     @Transactional
     public boolean delete(int id, int patientId) throws NotFoundException {
-       return em.createNamedQuery(Surgery.DELETE)
-               .setParameter("id", id)
-               .setParameter("patient_id", patientId)
-               .executeUpdate() != 0;
+        return em.createNamedQuery(Surgery.DELETE)
+                .setParameter("id", id)
+                .setParameter("patient_id", patientId)
+                .executeUpdate() != 0;
 
     }
 
