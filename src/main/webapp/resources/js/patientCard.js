@@ -18,7 +18,7 @@ $(document).ready(function () {
         'method': 'GET',
         'dataType': 'json'
     }).done(function (list) {
-        console.log(list)
+      //  console.log(list)
         if (!noPatient) {
             fill(list);
         }
@@ -28,20 +28,6 @@ $(document).ready(function () {
     });
 });
 
-/*function fillUsers(data) {
-    let list = $.parseJSON("[" + data + "]");
-    console.log(list[0].users);
-    let html = "";
-    for (let i = 0; i < list[0].users.length; i++) {
-        html += "<option value=\"";
-        html += list[0].users[i].id + "\">";
-        html += list[0].users[i].login + "</option>";
-    }
-    $("#selectUser").empty().append(html);
-        $('#selectList option[value="' + 0 + '"]').prop('selected', true);
-}*/
-
-
 let dataForDatatable;
 
 function fill(list) {
@@ -49,6 +35,7 @@ function fill(list) {
     dataForDatatable = $.parseJSON("[" + list + "]");
     allWorks = dataForDatatable[0].allWorks;
     $("#name").val(objects.patient.name);
+    $("#oms").val(objects.patient.oms);
     $("#address").val(objects.patient.address);
     $("#telephone").val(objects.patient.telephone);
     $("#date_of_birth").val(objects.patient.date_of_birth);
@@ -339,7 +326,7 @@ function deleteEntity1() {
 }
 
 function checkAndSavePatient() {
-    // console.log($('#detailsForm').serialize())
+     console.log($('#detailsForm').serialize())
     savePatient();
     return false;
 }
@@ -365,7 +352,8 @@ function savePatient() {
                 failNoty(data.responseText);
             },
             500: function (data) {
-                failNoty(data.responseText);
+                if (data.responseText.indexOf("ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности \"patient_unique_oms_idx\""))
+                failNoty("Номер ОМС уже занят");
             },
             //other codes. read the docs for more details
         }

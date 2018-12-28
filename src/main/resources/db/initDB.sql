@@ -23,6 +23,7 @@ CREATE UNIQUE INDEX users_unique_login_idx ON users (login);
 CREATE TABLE patient
 (
   id               INTEGER PRIMARY KEY     not null ,
+  oms           VARCHAR                 NOT NULL,
   name             VARCHAR                 NOT NULL,
   date_of_birth    TIMESTAMP               NOT NULL,
   address          VARCHAR                 NOT NULL,
@@ -31,6 +32,9 @@ CREATE TABLE patient
   blood_group      INTEGER                 NULL,
   FOREIGN KEY (id) REFERENCES users(id) ON DELETE CASCADE
 );
+CREATE UNIQUE INDEX patient_unique_oms_idx ON patient (oms);
+
+
 
 CREATE TABLE surgery
 (

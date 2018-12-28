@@ -16,10 +16,10 @@ INSERT INTO users (login, role, password) VALUES
   ('Doctor1', 'DOCTOR', '{bcrypt}$2a$10$9.SyCKdCW.hClNNHdbbx2Ou97RrLt2Ej/itH77jxavVPNhP1q8iS2'),
   ('Admin1', 'ADMIN', '{bcrypt}$2a$10$9.SyCKdCW.hClNNHdbbx2Ou97RrLt2Ej/itH77jxavVPNhP1q8iS2');
 
-INSERT INTO patient(id, name, address, telephone, gender, blood_group, date_of_birth)  VALUES
-  (100000, 'Ivanov Nikolay Semenovich', 'Kazan', '123456789', 'М', 2, '1980-05-30'),
-  (100001, 'Petrov', 'Moscow', '987654321', 'М', 4, '1936-05-30'),
-  (100002, 'Sidorov', 'Mars', '88888888', 'М', 1,'1960-05-30');
+INSERT INTO patient(id, oms, name, address, telephone, gender, blood_group, date_of_birth)  VALUES
+  (100000, 'кб-4200120', 'Ivanov Nikolay Semenovich', 'Kazan', '123456789', 'М', 2, '1980-05-30'),
+  (100001, 'кб-4200121', 'Petrov', 'Moscow', '987654321', 'М', 4, '1936-05-30'),
+  (100002, 'кб-4200122', 'Sidorov', 'Mars', '88888888', 'М', 1,'1960-05-30');
 
 INSERT INTO surgery(id, date, type, patient_id)  VALUES
   (0, '2015-05-30 10:00:00', 'аппендицит', 100000),

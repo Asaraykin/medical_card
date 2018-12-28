@@ -32,14 +32,22 @@
             <div class="col-md-8 order-md-1"
                  style="margin: auto; background-color: #ccd2fc; padding-bottom: 20px; padding-top: 10px">
 
-                <div class="mb-3">
+                <div class="row">
+                <div class="col-md-9 mb-3">
                     <label for="name">ФИО</label>
                     <input type="text" class="form-control" id="name" name="name" required value="1">
                     <div class="invalid-feedback" style="width: 100%;">
                       Необходимо ввести ФИО
                     </div>
                 </div>
-
+                <div class="col-md-3 mb-3">
+                    <label for="oms">Номер ОМС</label>
+                    <input type="text" class="form-control" id="oms" name="oms" required value="1">
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Необходимо ввести номер ОМС
+                    </div>
+                </div>
+                </div>
 
                 <div class="mb-3">
                     <label for="address">Адрес</label>
@@ -54,6 +62,7 @@
                         <label for="telephone">Телефон</label>
                         <input type="tel" class="form-control" id="telephone"  placeholder="(___)___-__-__"  name="telephone" <%--pattern="^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$"--%> >
                     </div>
+
 
                     <c:if test="${noPatient != true}">
                     <div class="col-md-8 mb-3" style="margin-top: -15px">

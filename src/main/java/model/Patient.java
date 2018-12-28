@@ -22,7 +22,7 @@ import java.util.Set;
 })
 
 @Entity
-@Table(name = "patient", uniqueConstraints = {@UniqueConstraint(columnNames = {"id"} )})
+@Table(name = "patient", uniqueConstraints = {@UniqueConstraint(columnNames = {"id", "oms"} )})
 public class Patient  {
 
     public static final String GET_ALL = "Patient.getAll";
@@ -51,6 +51,10 @@ public class Patient  {
     @NotBlank
     @Size(max = 300)
     private String address;
+
+    @Column
+    @NotBlank
+    private String oms;
 
     @Column
   //  @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$")
@@ -109,10 +113,19 @@ this.id = id;    }
         this.workPlaces = workPlaces;
     }
 
-    public Patient(User user, @NotBlank @Size(max = 150) String name, @NotBlank @Size(max = 300) String address, String telephone, @NotBlank String gender, int blood_group, @NotNull LocalDate date_of_birth) {
+    public String getOms() {
+        return oms;
+    }
+
+    public void setOms(String oms) {
+        this.oms = oms;
+    }
+
+    public Patient(User user, @NotBlank @Size(max = 150) String name, @NotBlank @Size(max = 300) String address, @NotBlank String oms, String telephone, @NotBlank String gender, int blood_group, @NotNull LocalDate date_of_birth) {
         this.user = user;
         this.name = name;
         this.address = address;
+        this.oms = oms;
         this.telephone = telephone;
         this.gender = gender;
         this.blood_group = blood_group;

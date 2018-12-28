@@ -19836,3 +19836,167 @@ List of constraint violations:[
 2018-12-28 00:41:34,717 INFO  web.user.AjaxAdminController.getAll:25 - getAll
 2018-12-28 00:41:51,425 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "favicon"]
 2018-12-28 00:42:12,277 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 10:55:33,992 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 10:55:37,009 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 10:55:37,358 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 10:55:37,360 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 10:55:37,818 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 10:55:38,701 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 10:55:39,057 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 10:55:39,067 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@195f7008
+2018-12-28 10:55:39,866 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 10:55:41,647 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 10:55:41,907 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 10:55:42,858 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 10:55:42,858 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 10:55:42,940 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33510f29, org.springframework.security.web.context.SecurityContextPersistenceFilter@52dfc8f6, org.springframework.security.web.header.HeaderWriterFilter@7d31935e, org.springframework.security.web.authentication.logout.LogoutFilter@1cd07860, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@a9c4f37, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e1e35ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3571cfce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bdc0b83, org.springframework.security.web.session.SessionManagementFilter@4b7d1240, org.springframework.security.web.access.ExceptionTranslationFilter@78884eda, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a1afbd7]
+2018-12-28 10:55:42,992 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 8994 ms
+2018-12-28 10:55:43,076 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 10:55:44,413 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1335 ms
+2018-12-28 10:55:54,163 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 10:55:54,399 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 10:55:57,504 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 10:56:32,351 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 10:58:56,423 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 10:58:58,691 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 10:58:58,924 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 10:58:58,928 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 10:58:59,263 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 10:58:59,806 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 10:59:00,018 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 10:59:00,032 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7f86db8b
+2018-12-28 10:59:00,678 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 10:59:01,869 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 10:59:02,041 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 10:59:02,895 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 10:59:02,895 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 10:59:02,979 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63386bb1, org.springframework.security.web.context.SecurityContextPersistenceFilter@7fe0f04a, org.springframework.security.web.header.HeaderWriterFilter@cf2ba6, org.springframework.security.web.authentication.logout.LogoutFilter@44025154, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@18d0ff04, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b72b737, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44fd7875, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c8f900d, org.springframework.security.web.session.SessionManagementFilter@535e7116, org.springframework.security.web.access.ExceptionTranslationFilter@14a6f682, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f31f323]
+2018-12-28 10:59:03,019 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 6588 ms
+2018-12-28 10:59:03,070 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 10:59:04,454 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1384 ms
+2018-12-28 11:00:22,229 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:00:28,797 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:00:29,232 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:00:38,749 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2018-12-28 11:00:47,843 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:00:48,186 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:03:11,935 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 11:03:16,110 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 11:03:16,412 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 11:03:16,417 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 11:03:16,792 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 11:03:17,541 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 11:03:17,820 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 11:03:17,837 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@338a85c
+2018-12-28 11:03:18,608 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 11:03:20,215 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 11:03:20,481 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 11:03:21,514 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 11:03:21,514 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 11:03:21,616 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f68b113, org.springframework.security.web.context.SecurityContextPersistenceFilter@135c523d, org.springframework.security.web.header.HeaderWriterFilter@510e9425, org.springframework.security.web.authentication.logout.LogoutFilter@7570851f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63a26824, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c4caeb7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@133afe1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@600bfd30, org.springframework.security.web.session.SessionManagementFilter@40e8732e, org.springframework.security.web.access.ExceptionTranslationFilter@7ccdaa7e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@417db370]
+2018-12-28 11:03:21,684 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 9741 ms
+2018-12-28 11:03:21,759 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 11:03:23,236 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1476 ms
+2018-12-28 11:03:38,966 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:05:18,572 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:05:19,019 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:05:47,017 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:06:03,871 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:06:19,821 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:06:20,129 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:06:41,075 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:07:04,608 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:07:04,936 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:09:05,479 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:09:05,926 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:09:09,960 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:09:45,706 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:09:46,026 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:11:28,695 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:12:43,197 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:12:43,535 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:13:17,500 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:13:31,454 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:13:39,086 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:13:39,383 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:14:19,765 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:14:30,214 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:14:39,314 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:15:57,181 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:16:29,243 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:16:29,604 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:16:43,967 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2018-12-28 11:16:49,536 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:16:49,857 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=oms, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-28 11:17:32,014 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 11:17:34,598 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 11:17:34,814 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 11:17:34,817 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 11:17:35,164 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 11:17:35,797 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 11:17:36,031 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 11:17:36,045 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@1eb4c0ee
+2018-12-28 11:17:37,669 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 11:17:39,360 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 11:17:39,556 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 11:17:40,541 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 11:17:40,541 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 11:17:40,642 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2630512c, org.springframework.security.web.context.SecurityContextPersistenceFilter@44449634, org.springframework.security.web.header.HeaderWriterFilter@7a13e389, org.springframework.security.web.authentication.logout.LogoutFilter@31cfba8f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@37d19910, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ea3d93f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fb214c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12de4b8d, org.springframework.security.web.session.SessionManagementFilter@74cbbf03, org.springframework.security.web.access.ExceptionTranslationFilter@47851610, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a837e78]
+2018-12-28 11:17:40,692 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 8674 ms
+2018-12-28 11:17:40,772 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 11:17:42,113 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1341 ms
+2018-12-28 11:20:47,705 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:20:58,047 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:21:10,213 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:21:10,587 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 23505
+2018-12-28 11:21:10,587 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "patient_unique_oms_idx"
+  Подробности: Ключ "(oms)=(кб-4200121)" уже существует.
+2018-12-28 11:21:10,591 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-28 11:23:51,468 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:23:56,734 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:23:57,035 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 23505
+2018-12-28 11:23:57,035 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "patient_unique_oms_idx"
+  Подробности: Ключ "(oms)=(кб-4200121)" уже существует.
+2018-12-28 11:23:57,036 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-28 11:24:05,274 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
