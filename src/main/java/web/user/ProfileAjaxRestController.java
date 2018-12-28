@@ -61,6 +61,8 @@ public class ProfileAjaxRestController {
         if (user.getRole() == null) {
             user.setRole(UserRoleEnum.PATIENT.name());
         }
+        PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         userService.create(user);
     }
 

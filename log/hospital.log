@@ -20000,3 +20000,222 @@ List of constraint violations:[
   Подробности: Ключ "(oms)=(кб-4200121)" уже существует.
 2018-12-28 11:23:57,036 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
 2018-12-28 11:24:05,274 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 11:25:13,158 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 11:25:15,710 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 11:25:15,872 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 11:25:15,876 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 11:25:16,207 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 11:25:16,827 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 11:25:17,043 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 11:25:17,055 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@494486f8
+2018-12-28 11:25:17,648 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 11:25:18,945 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 11:25:19,162 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 11:25:20,014 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 11:25:20,016 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 11:25:20,096 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@231a0eb8, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fb444a7, org.springframework.security.web.header.HeaderWriterFilter@4ff98afe, org.springframework.security.web.authentication.logout.LogoutFilter@532afa50, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5b89f024, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77e73eb9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39d2dc1b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3706c22f, org.springframework.security.web.session.SessionManagementFilter@5e0f9b27, org.springframework.security.web.access.ExceptionTranslationFilter@489594a3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f94aa1]
+2018-12-28 11:25:20,141 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 6977 ms
+2018-12-28 11:25:20,191 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 11:25:21,424 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1233 ms
+2018-12-28 11:25:43,590 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 11:26:43,441 ERROR o.s.s.w.a.UsernamePasswordAuthenticationFilter.doFilter:221 - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Not found entity with user not found
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:668)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: util.exception.NotFoundException: Not found entity with user not found
+	at util.ValidationUtil.checkNotFound(ValidationUtil.java:27)
+	at util.ValidationUtil.checkNotFound(ValidationUtil.java:21)
+	at service.user.UserServiceImpl.getByLogin(UserServiceImpl.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:206)
+	at com.sun.proxy.$Proxy74.getByLogin(Unknown Source)
+	at service.user.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:24)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 39 common frames omitted
+2018-12-28 11:27:01,013 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 11:30:17,184 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 11:30:22,282 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 11:30:22,554 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 11:30:22,556 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 11:30:22,942 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 11:30:23,511 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 11:30:23,721 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 11:30:23,737 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@1f887b44
+2018-12-28 11:30:24,324 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 11:30:25,543 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 11:30:25,726 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 11:30:26,604 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 11:30:26,604 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 11:30:26,688 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fedb998, org.springframework.security.web.context.SecurityContextPersistenceFilter@5807bd27, org.springframework.security.web.header.HeaderWriterFilter@1b3ac23, org.springframework.security.web.authentication.logout.LogoutFilter@50355ed0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1046f954, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54c70ea7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@428335df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68467568, org.springframework.security.web.session.SessionManagementFilter@3daa841c, org.springframework.security.web.access.ExceptionTranslationFilter@689bcee8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@71879c24]
+2018-12-28 11:30:26,952 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 9761 ms
+2018-12-28 11:30:27,001 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 11:30:28,180 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1179 ms
+2018-12-28 11:31:26,199 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 11:31:29,648 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-28 11:31:34,890 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100005
+2018-12-28 11:32:37,036 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 11:32:50,131 ERROR o.s.s.w.a.UsernamePasswordAuthenticationFilter.doFilter:221 - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Not found entity with user not found
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:668)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: util.exception.NotFoundException: Not found entity with user not found
+	at util.ValidationUtil.checkNotFound(ValidationUtil.java:27)
+	at util.ValidationUtil.checkNotFound(ValidationUtil.java:21)
+	at service.user.UserServiceImpl.getByLogin(UserServiceImpl.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:206)
+	at com.sun.proxy.$Proxy169.getByLogin(Unknown Source)
+	at service.user.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:24)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 39 common frames omitted
+2018-12-28 11:32:58,534 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "favicon"]
+2018-12-28 11:33:05,582 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 11:33:11,280 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:33:11,496 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:33:36,395 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:33:36,494 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:33:47,083 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:33:47,194 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:33:53,245 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:33:59,075 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:33:59,178 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:34:12,870 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:34:12,980 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:34:15,282 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100002
+2018-12-28 11:35:07,847 INFO  web.patient.PatientAjaxRestController.deleteWorkPlace:109 - delete workPlace 1 for patient 100002
+2018-12-28 11:35:21,943 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100002
+2018-12-28 11:38:04,552 INFO  web.visit.VisitAjaxRestController.createOrUpdate:65 - create Entity model.Visit (null) for user 100002
+2018-12-28 11:38:04,693 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Visit] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='должно быть задано', propertyPath=date, rootBeanClass=class model.Visit, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=diagnosis, rootBeanClass=class model.Visit, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+	ConstraintViolationImpl{interpolatedMessage='должно быть задано', propertyPath=date, rootBeanClass=class model.Visit, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+2018-12-28 11:38:31,275 INFO  web.visit.VisitAjaxRestController.createOrUpdate:65 - create Entity model.Visit (null) for user 100002
+2018-12-28 11:46:05,672 INFO  web.visit.VisitAjaxRestController.createOrUpdate:69 - update Entity model.Visit (100007) for user 100002
+2018-12-28 11:46:08,306 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100002
+2018-12-28 11:47:43,330 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 11:47:48,605 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:47:48,706 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:48:42,743 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:48:42,875 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:49:29,578 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:49:29,701 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:49:50,907 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:49:51,021 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:50:14,211 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100001
+2018-12-28 11:50:18,793 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:73 - create Entity model.WorkPlace (277777) for patient 100001
+2018-12-28 11:50:23,986 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:50:24,083 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:50:30,455 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 11:50:33,645 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:50:33,740 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 11:50:35,867 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100002
+2018-12-28 11:50:39,267 INFO  web.visit.VisitAjaxRestController.get:43 - get visit 100007 for user 100002
+2018-12-28 11:50:51,963 INFO  web.referral.ReferralAjaxRestController.createOrUpdate:63 - create Entity model.Referral (null) for user 100007
+2018-12-28 11:50:54,011 INFO  web.visit.VisitAjaxRestController.get:43 - get visit 100007 for user 100002
+2018-12-28 11:50:57,217 INFO  web.referral.ReferralAjaxRestController.get:42 - get referral 100008 for visit 100007
+2018-12-28 11:51:12,088 INFO  web.examination.ExaminationAjaxRestController.createOrUpdate:63 - create Entity model.Examination (null) for referral 100008
+2018-12-28 11:51:13,636 INFO  web.referral.ReferralAjaxRestController.get:42 - get referral 100008 for visit 100007
+2018-12-28 11:51:16,161 INFO  web.visit.VisitAjaxRestController.get:43 - get visit 100007 for user 100002
+2018-12-28 11:51:18,248 INFO  web.referral.ReferralAjaxRestController.get:42 - get referral 100008 for visit 100007
+2018-12-28 11:51:22,793 INFO  web.examination.ExaminationAjaxRestController.delete:76 - delete examination 100008 for referral 100008
+2018-12-28 11:51:23,418 INFO  web.referral.ReferralAjaxRestController.get:42 - get referral 100008 for visit 100007
+2018-12-28 11:51:25,132 INFO  web.visit.VisitAjaxRestController.get:43 - get visit 100007 for user 100002
+2018-12-28 11:51:28,512 INFO  web.visit.VisitAjaxRestController.get:43 - get visit 100007 for user 100002
+2018-12-28 11:51:30,062 INFO  web.referral.ReferralAjaxRestController.get:42 - get referral 100008 for visit 100007
+2018-12-28 11:51:31,824 INFO  web.visit.VisitAjaxRestController.get:43 - get visit 100007 for user 100002
+2018-12-28 11:51:40,006 INFO  web.referral.ReferralAjaxRestController.createOrUpdate:63 - create Entity model.Referral (null) for user 100007
+2018-12-28 11:51:41,105 INFO  web.visit.VisitAjaxRestController.get:43 - get visit 100007 for user 100002
+2018-12-28 11:51:50,924 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100002
+2018-12-28 11:52:15,397 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100002
+2018-12-28 11:52:35,949 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 11:52:36,044 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll

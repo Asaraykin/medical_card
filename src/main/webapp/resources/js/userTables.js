@@ -32,10 +32,11 @@ $(document).ready(function() {
         },
             "aaData": data,
             "columns": [
-                { title: "name", "data": "name"},
-                { title: "date_of_birth","data": "date_of_birth" },
-                { title: "address","data": "address" },
-                { title: "telephone","data": "telephone" },
+                { title: "№ ОМС","data": "oms" },
+                { title: "Имя", "data": "name"},
+                { title: "Дата рождения","data": "date_of_birth" },
+                { title: "Адрес","data": "address" },
+                { title: "Телефон","data": "telephone" },
                 {
                     title: "Открыть/Редактировать","render": renderEditBtn,
                     "defaultContent": "",
