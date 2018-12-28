@@ -19156,3 +19156,683 @@ Caused by: org.postgresql.util.PSQLException: ОШИБКА: столбец user0
 2018-12-26 23:48:35,873 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: INSERT или UPDATE в таблице "patient" нарушает ограничение внешнего ключа "patient_id_fkey"
   Подробности: Ключ (id)=(100005) отсутствует в таблице "users".
 2018-12-26 23:48:35,875 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-26 23:52:53,184 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-26 23:52:55,577 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-26 23:52:55,764 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-26 23:52:55,767 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-26 23:52:56,114 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-26 23:52:56,709 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-26 23:52:56,929 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-26 23:52:56,943 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@65648667
+2018-12-26 23:52:57,593 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-26 23:52:58,978 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-26 23:52:59,167 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-26 23:53:00,098 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-26 23:53:00,098 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-26 23:53:00,193 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7dd43d9e, org.springframework.security.web.context.SecurityContextPersistenceFilter@469b5828, org.springframework.security.web.header.HeaderWriterFilter@7642e1c0, org.springframework.security.web.authentication.logout.LogoutFilter@25a678ff, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@790973ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f464273, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50237100, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29def6d3, org.springframework.security.web.session.SessionManagementFilter@201fd342, org.springframework.security.web.access.ExceptionTranslationFilter@54a88163, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56da5069]
+2018-12-26 23:53:00,247 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 7057 ms
+2018-12-26 23:53:00,315 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-26 23:53:02,189 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1874 ms
+2018-12-26 23:53:07,247 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-26 23:53:08,579 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: 1, пол: М, группа крови: 1 with id=100003
+2018-12-26 23:53:08,840 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 23503
+2018-12-26 23:53:08,841 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: INSERT или UPDATE в таблице "patient" нарушает ограничение внешнего ключа "patient_id_fkey"
+  Подробности: Ключ (id)=(100005) отсутствует в таблице "users".
+2018-12-26 23:53:08,843 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-26 23:54:10,189 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-26 23:54:12,644 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-26 23:54:12,827 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-26 23:54:12,830 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-26 23:54:13,196 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-26 23:54:13,776 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-26 23:54:13,990 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-26 23:54:14,004 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7768d769
+2018-12-26 23:54:14,858 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-26 23:54:16,142 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-26 23:54:16,329 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-26 23:54:17,317 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-26 23:54:17,317 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-26 23:54:17,404 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43265354, org.springframework.security.web.context.SecurityContextPersistenceFilter@51297162, org.springframework.security.web.header.HeaderWriterFilter@3ac106d4, org.springframework.security.web.authentication.logout.LogoutFilter@22b80f05, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3ec7b7f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@80cb528, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@685675e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39870a44, org.springframework.security.web.session.SessionManagementFilter@3cc6bffa, org.springframework.security.web.access.ExceptionTranslationFilter@624c14b3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ee07f92]
+2018-12-26 23:54:17,451 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 7256 ms
+2018-12-26 23:54:17,510 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-26 23:54:18,817 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1307 ms
+2018-12-26 23:54:27,413 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-26 23:54:28,544 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: 1, пол: М, группа крови: 1 with id=100003
+2018-12-26 23:54:43,191 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: 1, пол: М, группа крови: 1 with id=100003
+2018-12-26 23:55:12,237 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-26 23:55:21,163 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-26 23:55:26,392 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "favicon"]
+2018-12-26 23:55:28,130 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-26 23:55:30,724 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-26 23:55:30,842 INFO  web.patient.PatientAjaxRestController.getAll:144 - getAll
+2018-12-26 23:55:46,261 INFO  web.patient.PatientAjaxRestController.deletePatient:116 - delete patient 100003 
+2018-12-26 23:55:50,469 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-26 23:55:51,893 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: 1, пол: М, группа крови: 1 with id=100003
+2018-12-26 23:55:59,332 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:73 - create Entity model.WorkPlace (277777) for patient 100003
+2018-12-26 23:56:01,946 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: 1, пол: М, группа крови: 1 with id=100003
+2018-12-26 23:56:15,212 INFO  web.surgery.SurgeryAjaxRestController.createOrUpdate:45 - create Entity model.Surgery (null) for user 100003
+2018-12-26 23:56:17,410 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-26 23:56:22,309 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-26 23:56:24,258 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-26 23:56:48,127 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-26 23:56:50,561 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-26 23:56:50,764 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-26 23:56:50,767 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-26 23:56:51,108 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-26 23:56:51,676 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-26 23:56:51,886 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-26 23:56:51,901 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@6157c9cf
+2018-12-26 23:56:52,655 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-26 23:56:54,297 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-26 23:56:55,023 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-26 23:56:56,019 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-26 23:56:56,019 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-26 23:56:56,112 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f2b9d37, org.springframework.security.web.context.SecurityContextPersistenceFilter@3af1778c, org.springframework.security.web.header.HeaderWriterFilter@63c231e1, org.springframework.security.web.authentication.logout.LogoutFilter@3b0e92ad, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55e86570, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ceed565, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@480dc2c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28e27dbb, org.springframework.security.web.session.SessionManagementFilter@4025aecf, org.springframework.security.web.access.ExceptionTranslationFilter@30bfa3ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@71057381]
+2018-12-26 23:56:56,164 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 8031 ms
+2018-12-26 23:56:56,232 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-26 23:56:57,546 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1314 ms
+2018-12-26 23:57:38,521 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-26 23:57:45,124 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-26 23:57:48,033 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-26 23:57:55,094 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:00:42,333 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:00:43,537 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:01:44,095 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:01:50,256 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:01:52,809 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:02:58,390 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:02:59,439 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:05:17,594 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:05:18,561 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:06:29,162 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:06:30,022 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:06:34,241 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:09:11,407 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:09:12,321 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:09:14,559 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:09:15,558 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:09:26,029 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:09:26,664 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:09:34,365 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:09:35,132 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:09:55,064 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:09:58,501 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:10:35,181 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:10:35,866 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:11:29,989 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:11:31,131 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:11:47,465 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:11:47,939 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:12:42,784 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:12:44,437 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:13:03,186 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:13:06,651 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:13:21,853 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:13:22,672 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:15:21,593 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:15:22,508 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'patient' on field 'blood_group': rejected value []; codes [typeMismatch.patient.blood_group,typeMismatch.blood_group,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [patient.blood_group,blood_group]; arguments []; default message [blood_group]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'blood_group'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+2018-12-27 00:15:34,597 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:15:35,508 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: 1, пол: М, группа крови: 0 with id=100003
+2018-12-27 00:20:00,529 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:21:29,938 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:22:25,295 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:22:32,980 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:23:54,777 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:24:08,980 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:24:12,577 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: null, адрес проживания: 1, тел.: 1, пол: М, группа крови: 0 with id=100003
+2018-12-27 00:24:12,889 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=name, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-27 00:24:20,559 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: null, адрес проживания: 1, тел.: 1, пол: М, группа крови: 1 with id=100003
+2018-12-27 00:24:20,845 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=name, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+]]
+2018-12-27 00:25:11,120 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: e, адрес проживания: date_of_birth=2018-07-22, тел.: null, пол: М, группа крови: 1 with id=100003
+2018-12-27 00:25:11,420 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='должно быть задано', propertyPath=date_of_birth, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+2018-12-27 00:25:38,363 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:25:44,281 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: date_of_birth=2018-07-22, тел.: null, пол: М, группа крови: 0 with id=100003
+2018-12-27 00:25:44,575 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='должно быть задано', propertyPath=date_of_birth, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+2018-12-27 00:26:25,883 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:26:42,699 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: date_of_birth=2018-07-22, тел.: null, пол: М, группа крови: 1 with id=100003
+2018-12-27 00:26:42,991 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='должно быть задано', propertyPath=date_of_birth, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+2018-12-27 00:28:13,021 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: date_of_birth=2018-07-22, тел.: null, пол: М, группа крови: 1 with id=100003
+2018-12-27 00:28:13,293 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [Validation failed for classes [model.Patient] during update time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='должно быть задано', propertyPath=date_of_birth, rootBeanClass=class model.Patient, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+]]
+2018-12-27 00:28:45,613 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:28:52,752 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100003
+2018-12-27 00:30:07,186 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:30:17,080 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100003
+2018-12-27 00:30:23,022 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:73 - create Entity model.WorkPlace (277777) for patient 100003
+2018-12-27 00:30:52,073 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:73 - create Entity model.WorkPlace (0) for patient 100003
+2018-12-27 00:31:22,314 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:31:22,426 INFO  web.patient.PatientAjaxRestController.getAll:144 - getAll
+2018-12-27 00:31:28,063 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:31:36,471 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:34:44,234 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:35:18,458 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:35:18,573 INFO  web.patient.PatientAjaxRestController.getAll:144 - getAll
+2018-12-27 00:35:23,234 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:35:51,068 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:78 - update Entity model.WorkPlace (1) for patient 100000
+2018-12-27 00:35:59,041 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:73 - create Entity model.WorkPlace (0) for patient 100000
+2018-12-27 00:38:22,979 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:38:23,536 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:38:29,059 INFO  web.patient.PatientAjaxRestController.deleteWorkPlace:109 - delete workPlace 1 for patient 100000
+2018-12-27 00:38:40,206 INFO  web.patient.PatientAjaxRestController.deleteWorkPlace:109 - delete workPlace 277777 for patient 100000
+2018-12-27 00:39:14,200 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:39:16,890 INFO  web.patient.PatientAjaxRestController.deleteWorkPlace:109 - delete workPlace 0 for patient 100000
+2018-12-27 00:40:20,980 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:40:23,561 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:73 - create Entity model.WorkPlace (277777) for patient 100000
+2018-12-27 00:40:26,627 INFO  web.patient.PatientAjaxRestController.deleteWorkPlace:109 - delete workPlace 277777 for patient 100000
+2018-12-27 00:40:31,403 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:78 - update Entity model.WorkPlace (0) for patient 100000
+2018-12-27 00:40:36,684 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-27 00:40:39,959 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-27 00:40:41,788 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100004
+2018-12-27 00:40:45,684 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-27 00:40:48,960 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:40:49,075 INFO  web.patient.PatientAjaxRestController.getAll:144 - getAll
+2018-12-27 00:40:52,276 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:40:54,208 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1rddfdfg, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100003
+2018-12-27 00:40:56,557 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:40:56,651 INFO  web.patient.PatientAjaxRestController.getAll:144 - getAll
+2018-12-27 00:41:00,924 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100003
+2018-12-27 00:41:03,793 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:73 - create Entity model.WorkPlace (1) for patient 100003
+2018-12-27 00:41:06,254 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1rddfdfg, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100003
+2018-12-27 00:41:09,969 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:41:10,060 INFO  web.patient.PatientAjaxRestController.getAll:144 - getAll
+2018-12-27 00:41:13,057 INFO  web.patient.PatientAjaxRestController.deletePatient:116 - delete patient 100004 
+2018-12-27 00:41:20,740 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-27 00:41:25,779 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100002
+2018-12-27 00:41:26,795 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Sidorov, адрес проживания: Mars, тел.: 88888888, пол: М, группа крови: 1 with id=100002
+2018-12-27 00:41:31,688 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Sidorov, адрес проживания: Marsdfgdfg, тел.: 88888888, пол: М, группа крови: 1 with id=100002
+2018-12-27 00:41:33,191 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-27 00:41:38,068 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-27 00:41:40,389 INFO  web.user.AjaxAdminController.deleteUser:31 - delete user 100002
+2018-12-27 00:41:42,883 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-27 00:41:45,946 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:41:46,150 INFO  web.patient.PatientAjaxRestController.getAll:144 - getAll
+2018-12-27 00:41:49,203 INFO  web.patient.PatientAjaxRestController.deletePatient:116 - delete patient 100001 
+2018-12-27 00:41:51,193 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:41:51,382 INFO  web.patient.PatientAjaxRestController.getAll:144 - getAll
+2018-12-27 00:41:55,271 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100004
+2018-12-27 00:41:57,285 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1dfgdfgdfgdfgdfg, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100004
+2018-12-27 00:42:00,765 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:73 - create Entity model.WorkPlace (1) for patient 100004
+2018-12-27 00:42:03,002 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:42:03,201 INFO  web.patient.PatientAjaxRestController.getAll:144 - getAll
+2018-12-27 00:42:12,916 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:42:13,132 INFO  web.patient.PatientAjaxRestController.get:47 - get 100000
+2018-12-27 00:42:18,279 INFO  web.patient.PatientAjaxRestController.deletePatient:116 - delete patient 100000 
+2018-12-27 00:42:22,139 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:42:25,048 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovichfff, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-27 00:42:27,853 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:42:28,062 INFO  web.patient.PatientAjaxRestController.get:47 - get 100000
+2018-12-27 00:43:18,749 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 00:43:22,533 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 00:43:22,722 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 00:43:22,725 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 00:43:23,074 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 00:43:23,631 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 00:43:23,848 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 00:43:23,861 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@3ee44830
+2018-12-27 00:43:24,513 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 00:43:25,799 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 00:43:25,989 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 00:43:26,874 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 00:43:26,875 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 00:43:26,962 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e9a274e, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e3ba0a6, org.springframework.security.web.header.HeaderWriterFilter@19453b58, org.springframework.security.web.authentication.logout.LogoutFilter@771acf2c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1e71bbbe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8cdc2b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ff166fe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36a8446e, org.springframework.security.web.session.SessionManagementFilter@3bd043d5, org.springframework.security.web.access.ExceptionTranslationFilter@423c08df, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@12ae54ba]
+2018-12-27 00:43:27,007 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 8250 ms
+2018-12-27 00:43:27,074 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 00:43:28,339 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1265 ms
+2018-12-27 00:43:39,521 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:43:39,734 INFO  web.patient.PatientAjaxRestController.get:47 - get 100000
+2018-12-27 00:43:42,345 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:43:45,677 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovichgvfdg, адрес проживания: Kazan, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-27 00:43:51,526 INFO  web.patient.PatientAjaxRestController.deleteWorkPlace:109 - delete workPlace 277777 for patient 100000
+2018-12-27 00:43:59,262 INFO  web.surgery.SurgeryAjaxRestController.createOrUpdate:45 - create Entity model.Surgery (null) for user 100000
+2018-12-27 00:44:00,937 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-27 00:44:03,560 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-27 00:44:03,755 INFO  web.patient.PatientAjaxRestController.get:47 - get 100000
+2018-12-27 00:44:07,172 INFO  web.patient.PatientAjaxRestController.deletePatient:116 - delete patient 100000 
+2018-12-27 21:24:19,445 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 21:24:23,660 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 21:24:23,965 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 21:24:23,967 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 21:24:24,363 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 21:24:25,225 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 21:24:25,549 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 21:24:25,559 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@18effd7
+2018-12-27 21:24:26,436 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 21:24:28,306 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 21:24:28,632 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 21:24:30,588 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 21:24:30,590 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 21:24:30,768 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c6c72d9, org.springframework.security.web.context.SecurityContextPersistenceFilter@29df706a, org.springframework.security.web.header.HeaderWriterFilter@57a381b7, org.springframework.security.web.authentication.logout.LogoutFilter@7ca65f9f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7e69480d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@24e67d12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6af05656, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18716e79, org.springframework.security.web.session.SessionManagementFilter@57cd8970, org.springframework.security.web.access.ExceptionTranslationFilter@2f85f147, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55243aef]
+2018-12-27 21:24:31,238 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 11771 ms
+2018-12-27 21:24:31,759 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 21:24:35,943 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 4182 ms
+2018-12-27 21:30:05,801 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 21:30:07,974 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 21:30:08,151 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 21:30:08,153 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 21:30:08,477 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 21:30:09,025 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 21:30:09,242 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 21:30:09,258 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7ff0c202
+2018-12-27 21:30:09,978 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 21:30:12,774 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 21:30:12,996 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 21:30:13,902 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 21:30:13,902 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 21:30:13,987 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f0dc92a, org.springframework.security.web.context.SecurityContextPersistenceFilter@885b31, org.springframework.security.web.header.HeaderWriterFilter@7c80cf97, org.springframework.security.web.authentication.logout.LogoutFilter@6a274d51, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ff84f50, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b059aef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36595a4a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72029b54, org.springframework.security.web.session.SessionManagementFilter@432f3c25, org.springframework.security.web.access.ExceptionTranslationFilter@5af1f4cc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1764f0f8]
+2018-12-27 21:30:14,029 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 8224 ms
+2018-12-27 21:30:14,077 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 21:30:15,505 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1426 ms
+2018-12-27 22:30:11,595 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 22:30:13,629 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 22:30:13,809 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 22:30:13,811 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 22:30:14,152 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 22:30:14,891 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 22:30:15,112 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 22:30:15,148 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@691e9c1e
+2018-12-27 22:30:15,789 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 22:30:17,272 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 22:30:17,443 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 22:30:18,261 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 22:30:18,263 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 22:30:18,343 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14dab7b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@631d9ebf, org.springframework.security.web.header.HeaderWriterFilter@205651ac, org.springframework.security.web.authentication.logout.LogoutFilter@19f1fb8d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@535c038f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@444a8d00, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5baca443, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27298ed7, org.springframework.security.web.session.SessionManagementFilter@56f17b72, org.springframework.security.web.access.ExceptionTranslationFilter@afb8020, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59315dfc]
+2018-12-27 22:30:18,389 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 6790 ms
+2018-12-27 22:30:18,437 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 22:30:19,617 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1180 ms
+2018-12-27 22:30:54,184 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.web.bind.MissingPathVariableException: Missing URI template variable 'adminID' for method parameter of type int]
+2018-12-27 22:30:54,287 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "favicon"]
+2018-12-27 22:31:23,719 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 22:31:25,903 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 22:31:26,078 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 22:31:26,080 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 22:31:26,393 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 22:31:26,929 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 22:31:27,154 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 22:31:27,168 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@6b08bd7f
+2018-12-27 22:31:27,819 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 22:31:29,550 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 22:31:29,756 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 22:31:31,646 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 22:31:31,646 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 22:31:31,856 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2223d9f0, org.springframework.security.web.context.SecurityContextPersistenceFilter@4eebfe88, org.springframework.security.web.header.HeaderWriterFilter@3429258a, org.springframework.security.web.authentication.logout.LogoutFilter@59f60d78, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6cea034f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@465a843, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a280a63, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1eef5680, org.springframework.security.web.session.SessionManagementFilter@1f642894, org.springframework.security.web.access.ExceptionTranslationFilter@123f561f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74ea6ad5]
+2018-12-27 22:31:31,916 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 8191 ms
+2018-12-27 22:31:32,010 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 22:31:34,046 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 2036 ms
+2018-12-27 22:33:07,088 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 22:33:09,436 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 22:33:09,608 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 22:33:09,612 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 22:33:09,900 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 22:33:10,507 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 22:33:10,719 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 22:33:10,731 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@58c49ae2
+2018-12-27 22:33:11,353 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 22:33:12,663 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 22:33:12,839 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 22:33:13,982 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 22:33:13,984 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 22:33:14,066 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29abf1f0, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d615356, org.springframework.security.web.header.HeaderWriterFilter@4374b963, org.springframework.security.web.authentication.logout.LogoutFilter@ea23237, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55c92600, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4477c6d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63d7ac9e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@354e3be3, org.springframework.security.web.session.SessionManagementFilter@44f040ec, org.springframework.security.web.access.ExceptionTranslationFilter@5f1ac0b8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7dfebea8]
+2018-12-27 22:33:14,117 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 7024 ms
+2018-12-27 22:33:14,173 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 22:33:15,779 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1604 ms
+2018-12-27 22:33:25,148 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 22:33:27,315 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 22:33:27,494 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 22:33:27,498 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 22:33:27,786 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 22:33:28,377 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 22:33:28,555 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 22:33:28,570 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@78d516e3
+2018-12-27 22:33:29,155 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 22:33:30,332 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 22:33:30,516 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 22:33:31,920 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 22:33:31,920 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 22:33:32,040 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19c1a1bf, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c29371d, org.springframework.security.web.header.HeaderWriterFilter@3195be29, org.springframework.security.web.authentication.logout.LogoutFilter@4c693daa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@708f73bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55a0c943, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c166802, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12d82ba1, org.springframework.security.web.session.SessionManagementFilter@42eef4f1, org.springframework.security.web.access.ExceptionTranslationFilter@5f7b929, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d6dc2e9]
+2018-12-27 22:33:32,084 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 6930 ms
+2018-12-27 22:33:32,144 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 22:33:33,276 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1132 ms
+2018-12-27 23:21:47,775 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 23:21:50,157 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 23:21:50,333 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 23:21:50,335 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 23:21:50,621 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 23:21:51,148 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 23:21:51,350 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 23:21:51,364 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@6a6802a4
+2018-12-27 23:21:51,926 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 23:21:53,112 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 23:21:53,290 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 23:21:54,140 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 23:21:54,140 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 23:21:54,229 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d9b4c49, org.springframework.security.web.context.SecurityContextPersistenceFilter@2260225e, org.springframework.security.web.header.HeaderWriterFilter@4730be7b, org.springframework.security.web.authentication.logout.LogoutFilter@3aba1fae, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@587e9c4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53b8f122, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20e8388b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27e84ff7, org.springframework.security.web.session.SessionManagementFilter@a85a7b5, org.springframework.security.web.access.ExceptionTranslationFilter@55852e6b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@54b053b5]
+2018-12-27 23:21:54,273 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 6492 ms
+2018-12-27 23:21:54,329 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 23:21:55,533 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1203 ms
+2018-12-27 23:22:22,885 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 23:22:25,180 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 23:22:25,368 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 23:22:25,372 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 23:22:25,698 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 23:22:26,336 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 23:22:26,576 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 23:22:26,668 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@22d533d8
+2018-12-27 23:22:27,611 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 23:22:29,005 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 23:22:29,191 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 23:22:30,124 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 23:22:30,124 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 23:22:30,247 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a70d626, org.springframework.security.web.context.SecurityContextPersistenceFilter@172c3f08, org.springframework.security.web.header.HeaderWriterFilter@2384eebf, org.springframework.security.web.authentication.logout.LogoutFilter@67ba8b56, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f0cfc8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65afd11, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1055cb5b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@afec62f, org.springframework.security.web.session.SessionManagementFilter@24ab8371, org.springframework.security.web.access.ExceptionTranslationFilter@26454fd0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22905edf]
+2018-12-27 23:22:30,289 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 7400 ms
+2018-12-27 23:22:30,342 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 23:22:31,896 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1554 ms
+2018-12-27 23:26:16,747 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 23:26:18,927 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 23:26:19,105 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 23:26:19,108 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 23:26:19,412 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 23:26:19,966 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 23:26:20,185 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 23:26:20,197 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2468d5e8
+2018-12-27 23:26:20,824 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 23:26:22,119 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 23:26:22,293 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 23:26:23,132 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 23:26:23,133 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 23:26:23,207 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@84f0dd6, org.springframework.security.web.context.SecurityContextPersistenceFilter@236281cc, org.springframework.security.web.header.HeaderWriterFilter@3026a6a0, org.springframework.security.web.authentication.logout.LogoutFilter@25b2656b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5dce55a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73483d73, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a93dbd9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27833a38, org.springframework.security.web.session.SessionManagementFilter@5408a22b, org.springframework.security.web.access.ExceptionTranslationFilter@5a1b46b1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ad1b58e]
+2018-12-27 23:26:23,250 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 6498 ms
+2018-12-27 23:26:23,301 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 23:26:24,403 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1102 ms
+2018-12-27 23:33:30,640 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-27 23:33:32,883 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-27 23:33:33,070 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-27 23:33:33,073 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-27 23:33:33,371 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-27 23:33:33,920 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-27 23:33:34,134 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-27 23:33:34,147 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@497ff04c
+2018-12-27 23:33:34,714 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-27 23:33:35,979 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-27 23:33:36,171 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-27 23:33:37,076 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-27 23:33:37,076 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-27 23:33:37,162 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@742add04, org.springframework.security.web.context.SecurityContextPersistenceFilter@639b80e6, org.springframework.security.web.header.HeaderWriterFilter@5aecc515, org.springframework.security.web.authentication.logout.LogoutFilter@6b449726, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@382970bb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ef29614, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34b53653, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@775d792, org.springframework.security.web.session.SessionManagementFilter@4a3915ca, org.springframework.security.web.access.ExceptionTranslationFilter@2083ffc8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5ca41f33]
+2018-12-27 23:33:37,210 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 6564 ms
+2018-12-27 23:33:37,268 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-27 23:33:38,508 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1240 ms
+2018-12-28 00:05:08,452 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 00:05:10,466 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 00:05:10,646 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 00:05:10,649 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 00:05:10,944 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 00:05:11,490 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 00:05:11,697 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 00:05:11,712 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@b5d8014
+2018-12-28 00:05:12,288 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 00:05:13,575 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 00:05:13,754 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 00:05:14,614 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 00:05:14,614 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 00:05:14,691 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c6db9d, org.springframework.security.web.context.SecurityContextPersistenceFilter@173bda7f, org.springframework.security.web.header.HeaderWriterFilter@6b0df01d, org.springframework.security.web.authentication.logout.LogoutFilter@1f93e76c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@72aa910a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61540ab3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a195dbd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24c2380e, org.springframework.security.web.session.SessionManagementFilter@76fe99bc, org.springframework.security.web.access.ExceptionTranslationFilter@27719064, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f025345]
+2018-12-28 00:05:14,734 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 6277 ms
+2018-12-28 00:05:14,789 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 00:05:15,903 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1114 ms
+2018-12-28 00:07:00,012 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 00:07:03,532 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 00:07:03,839 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 00:07:03,844 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 00:07:04,380 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 00:07:05,277 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 00:07:05,570 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 00:07:05,587 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@50c7a547
+2018-12-28 00:07:06,657 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 00:07:08,437 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 00:07:08,686 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 00:07:09,717 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 00:07:09,717 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 00:07:09,824 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72a9a595, org.springframework.security.web.context.SecurityContextPersistenceFilter@722f05c8, org.springframework.security.web.header.HeaderWriterFilter@4aa6a971, org.springframework.security.web.authentication.logout.LogoutFilter@6909dfae, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@ebeb687, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72482c2d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3098868, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f495e7a, org.springframework.security.web.session.SessionManagementFilter@412e4d7, org.springframework.security.web.access.ExceptionTranslationFilter@777fb685, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c22193c]
+2018-12-28 00:07:09,886 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 9865 ms
+2018-12-28 00:07:09,961 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 00:07:11,478 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1517 ms
+2018-12-28 00:08:49,690 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 00:08:52,585 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 00:08:52,804 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 00:08:52,807 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 00:08:53,719 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 00:08:55,218 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 00:08:55,463 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 00:08:55,481 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@44ce0a73
+2018-12-28 00:08:56,136 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 00:08:57,459 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 00:08:57,684 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 00:08:58,721 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 00:08:58,722 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 00:08:58,828 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52233415, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d1f4226, org.springframework.security.web.header.HeaderWriterFilter@53a9b143, org.springframework.security.web.authentication.logout.LogoutFilter@2d6156c7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@36d18dd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74b8e268, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5dc6e04a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27fa3d79, org.springframework.security.web.session.SessionManagementFilter@757db65d, org.springframework.security.web.access.ExceptionTranslationFilter@2ab319c3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d038396]
+2018-12-28 00:08:58,879 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 9183 ms
+2018-12-28 00:08:58,944 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 00:09:00,560 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1615 ms
+2018-12-28 00:10:16,464 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 00:10:19,172 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 00:10:19,400 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 00:10:19,403 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 00:10:19,793 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 00:10:20,383 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 00:10:20,604 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 00:10:20,619 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@453cae02
+2018-12-28 00:10:21,248 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 00:10:22,560 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 00:10:22,769 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 00:10:23,664 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 00:10:23,665 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 00:10:23,759 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@616a612d, org.springframework.security.web.context.SecurityContextPersistenceFilter@6550f1ef, org.springframework.security.web.header.HeaderWriterFilter@4a106497, org.springframework.security.web.authentication.logout.LogoutFilter@7cf44d34, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3e5d8a17, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77633c25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6382de4d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43267040, org.springframework.security.web.session.SessionManagementFilter@631c230d, org.springframework.security.web.access.ExceptionTranslationFilter@62cae57e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@260f3ce5]
+2018-12-28 00:10:23,808 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 7338 ms
+2018-12-28 00:10:23,881 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 00:10:25,797 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1916 ms
+2018-12-28 00:13:21,995 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 00:13:24,376 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 00:13:24,575 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 00:13:24,578 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 00:13:24,948 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 00:13:25,536 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 00:13:25,773 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 00:13:25,790 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@789f44e3
+2018-12-28 00:13:26,636 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 00:13:28,315 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 00:13:28,508 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 00:13:29,429 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 00:13:29,430 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 00:13:29,533 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32df49d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a64bfd7, org.springframework.security.web.header.HeaderWriterFilter@3c672efd, org.springframework.security.web.authentication.logout.LogoutFilter@543a0d76, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4df4f753, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5074a968, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78aab6d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42565ae1, org.springframework.security.web.session.SessionManagementFilter@bac6c7a, org.springframework.security.web.access.ExceptionTranslationFilter@52d358e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2acab3c8]
+2018-12-28 00:13:29,583 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 7582 ms
+2018-12-28 00:13:29,649 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 00:13:30,972 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1322 ms
+2018-12-28 00:14:33,008 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 23505
+2018-12-28 00:14:33,009 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_unique_login_idx"
+  Подробности: Ключ "(login)=(11111)" уже существует.
+2018-12-28 00:14:33,013 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-28 00:17:40,593 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 23505
+2018-12-28 00:17:40,593 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_unique_login_idx"
+  Подробности: Ключ "(login)=(33333)" уже существует.
+2018-12-28 00:17:40,594 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-28 00:20:27,151 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "favicon"]
+2018-12-28 00:20:33,642 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 00:20:36,744 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-28 00:20:38,727 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100005
+2018-12-28 00:20:41,662 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 00:20:44,995 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 00:20:45,221 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 00:20:49,359 INFO  web.patient.PatientAjaxRestController.deletePatient:116 - delete patient 100005 
+2018-12-28 00:21:10,508 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 00:21:12,725 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-28 00:21:13,537 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100005
+2018-12-28 00:21:16,221 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100005
+2018-12-28 00:32:21,875 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 00:32:24,148 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 00:32:24,337 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 00:32:24,342 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 00:32:24,717 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 00:32:25,343 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 00:32:25,574 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 00:32:25,589 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@23beb98a
+2018-12-28 00:32:26,409 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 00:32:27,737 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 00:32:27,918 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 00:32:28,795 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 00:32:28,796 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 00:32:28,895 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58328801, org.springframework.security.web.context.SecurityContextPersistenceFilter@30f83f53, org.springframework.security.web.header.HeaderWriterFilter@91fc9a4, org.springframework.security.web.authentication.logout.LogoutFilter@f87d515, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@be92724, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@464093ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20b469ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@211f410c, org.springframework.security.web.session.SessionManagementFilter@f79f1cc, org.springframework.security.web.access.ExceptionTranslationFilter@6f6d8803, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d3fc6ee]
+2018-12-28 00:32:28,944 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 7063 ms
+2018-12-28 00:32:29,021 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 00:32:30,288 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1267 ms
+2018-12-28 00:34:45,229 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:270 - Root WebApplicationContext: initialization started
+2018-12-28 00:34:47,443 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-28 00:34:47,632 INFO  org.hibernate.Version.logVersion:46 - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-28 00:34:47,635 INFO  org.hibernate.cfg.Environment.<clinit>:213 - HHH000206: hibernate.properties not found
+2018-12-28 00:34:48,001 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-28 00:34:48,576 INFO  org.hibernate.dialect.Dialect.<init>:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2018-12-28 00:34:48,801 INFO  o.h.engine.jdbc.env.internal.LobCreatorBuilderImpl.useContextualLobCreation:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-12-28 00:34:48,817 INFO  org.hibernate.type.BasicTypeRegistry.register:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@344fc891
+2018-12-28 00:34:49,445 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.0.13.Final
+2018-12-28 00:34:50,742 INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator.initiateService:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-28 00:34:50,928 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-28 00:34:51,808 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.css'], []
+2018-12-28 00:34:51,809 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: Ant [pattern='/*.js'], []
+2018-12-28 00:34:51,907 INFO  o.s.security.web.DefaultSecurityFilterChain.<init>:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@93f0b85, org.springframework.security.web.context.SecurityContextPersistenceFilter@2dc55e26, org.springframework.security.web.header.HeaderWriterFilter@49ffaee9, org.springframework.security.web.authentication.logout.LogoutFilter@2d11eada, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@10d8279f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d35d815, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d3bc1a6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b1d1a4c, org.springframework.security.web.session.SessionManagementFilter@4ccaadb1, org.springframework.security.web.access.ExceptionTranslationFilter@21912491, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b3858d1]
+2018-12-28 00:34:51,957 INFO  org.springframework.web.context.ContextLoader.initWebApplicationContext:306 - Root WebApplicationContext initialized in 6723 ms
+2018-12-28 00:34:52,029 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:521 - Initializing Servlet 'mvc-dispatcher'
+2018-12-28 00:34:53,448 INFO  org.springframework.web.servlet.DispatcherServlet.initServletBean:543 - Completed initialization in 1419 ms
+2018-12-28 00:35:06,129 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 23505
+2018-12-28 00:35:06,130 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_unique_login_idx"
+  Подробности: Ключ "(login)=(66666)" уже существует.
+2018-12-28 00:35:06,135 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-28 00:35:14,328 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 23505
+2018-12-28 00:35:14,329 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_unique_login_idx"
+  Подробности: Ключ "(login)=(66666)" уже существует.
+2018-12-28 00:35:14,329 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-28 00:35:17,622 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 23505
+2018-12-28 00:35:17,623 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_unique_login_idx"
+  Подробности: Ключ "(login)=(66666)" уже существует.
+2018-12-28 00:35:17,624 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-28 00:36:26,496 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 23505
+2018-12-28 00:36:26,496 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_unique_login_idx"
+  Подробности: Ключ "(login)=(88889)" уже существует.
+2018-12-28 00:36:26,497 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-28 00:36:30,132 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: 0, SQLState: 23505
+2018-12-28 00:36:30,132 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "users_unique_login_idx"
+  Подробности: Ключ "(login)=(88889)" уже существует.
+2018-12-28 00:36:30,133 ERROR org.hibernate.internal.ExceptionMapperStandardImpl.mapManagedFlushFailure:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2018-12-28 00:36:40,190 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 00:36:43,773 INFO  web.user.AjaxAdminController.deleteUser:31 - delete user 100005
+2018-12-28 00:37:00,947 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 00:37:01,146 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 00:37:04,360 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 00:37:17,574 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazan, тел.: 1234f56789, пол: М, группа крови: 2 with id=100000
+2018-12-28 00:37:24,504 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: Ivanov Nikolay Semenovich, адрес проживания: Kazanffdfgdf, тел.: 123456789, пол: М, группа крови: 2 with id=100000
+2018-12-28 00:37:27,004 INFO  web.user.AjaxUserController.getUsers:40 - getUsers
+2018-12-28 00:37:27,192 INFO  web.patient.PatientAjaxRestController.getAll:142 - getAll
+2018-12-28 00:37:31,198 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 00:37:38,850 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:78 - update Entity model.WorkPlace (1) for patient 100000
+2018-12-28 00:37:44,025 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:73 - create Entity model.WorkPlace (0) for patient 100000
+2018-12-28 00:37:50,368 INFO  web.patient.PatientAjaxRestController.deleteWorkPlace:109 - delete workPlace 277777 for patient 100000
+2018-12-28 00:38:05,127 INFO  web.surgery.SurgeryAjaxRestController.createOrUpdate:49 - update Entity model.Surgery (0) for user 100000
+2018-12-28 00:38:07,904 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 00:38:14,274 INFO  web.surgery.SurgeryAjaxRestController.delete:58 - delete surgery 0 for user 100000
+2018-12-28 00:38:14,747 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 00:38:20,403 INFO  web.surgery.SurgeryAjaxRestController.delete:58 - delete surgery 3 for user 100000
+2018-12-28 00:38:20,890 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 00:38:27,633 INFO  web.surgery.SurgeryAjaxRestController.createOrUpdate:45 - create Entity model.Surgery (null) for user 100000
+2018-12-28 00:38:29,510 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 00:38:35,599 INFO  web.visit.VisitAjaxRestController.get:43 - get visit 0 for user 100000
+2018-12-28 00:38:54,042 INFO  web.referral.ReferralAjaxRestController.get:42 - get referral 0 for visit 0
+2018-12-28 00:39:06,958 INFO  web.examination.ExaminationAjaxRestController.delete:76 - delete examination 0 for referral 0
+2018-12-28 00:39:07,555 INFO  web.referral.ReferralAjaxRestController.get:42 - get referral 0 for visit 0
+2018-12-28 00:39:13,581 INFO  web.referral.ReferralAjaxRestController.get:42 - get referral 0 for visit 0
+2018-12-28 00:39:17,354 INFO  web.referral.ReferralAjaxRestController.createOrUpdate:67 - update Entity model.Referral (0) for user 0
+2018-12-28 00:39:18,914 INFO  web.visit.VisitAjaxRestController.get:43 - get visit 0 for user 100000
+2018-12-28 00:39:25,215 INFO  web.referral.ReferralAjaxRestController.createOrUpdate:63 - create Entity model.Referral (null) for user 0
+2018-12-28 00:39:26,605 INFO  web.visit.VisitAjaxRestController.get:43 - get visit 0 for user 100000
+2018-12-28 00:39:29,408 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100000
+2018-12-28 00:39:37,414 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 00:40:38,097 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get null
+2018-12-28 00:40:47,474 INFO  web.patient.PatientAjaxRestController.createOrUpdate:124 - update ФИО: 1, адрес проживания: 1, тел.: , пол: М, группа крови: 1 with id=100004
+2018-12-28 00:40:58,519 INFO  web.surgery.SurgeryAjaxRestController.createOrUpdate:45 - create Entity model.Surgery (null) for user 100004
+2018-12-28 00:41:00,352 INFO  web.patient.PatientAjaxRestController.getPatientCard:88 - get 100004
+2018-12-28 00:41:12,389 INFO  web.patient.PatientAjaxRestController.getWorkPlaces:73 - create Entity model.WorkPlace (277777) for patient 100004
+2018-12-28 00:41:24,732 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 00:41:30,442 INFO  web.user.AjaxAdminController.deleteUser:31 - delete user 100009
+2018-12-28 00:41:34,717 INFO  web.user.AjaxAdminController.getAll:25 - getAll
+2018-12-28 00:41:51,425 WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver.logException:194 - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "favicon"]
+2018-12-28 00:42:12,277 INFO  web.user.AjaxAdminController.getAll:25 - getAll

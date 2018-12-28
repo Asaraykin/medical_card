@@ -173,6 +173,14 @@ public class RootController {
         return "profile";
     }
 
+    @GetMapping(value = {"/profile/create", "/profile/create/{adminId}"})
+    public String createNewProfile(Model model, @PathVariable(value = "adminId", required = false) Integer adminId){
+      if(adminId != null) {
+          model.addAttribute("adminId", adminId);
+      }
+        return "createProfile";
+    }
+
     @GetMapping("/test")
     public String test(Model model) {
         User user = userService.get(100000);

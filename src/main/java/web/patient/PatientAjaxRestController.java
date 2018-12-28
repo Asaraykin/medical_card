@@ -130,8 +130,6 @@ public class PatientAjaxRestController {
             System.out.println(patient.getId());
             patientService.create(patient);
             userService.update(user);
-
-
         } else {
             Set<WorkPlace> setToSave = new HashSet<>(patientService.get(id).getWorkPlaces());
             patient.setWorkPlaces(setToSave);

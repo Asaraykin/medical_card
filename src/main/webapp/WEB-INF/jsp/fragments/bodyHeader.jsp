@@ -8,7 +8,10 @@
     <div class="container" >
         <a href="" class="navbar-brand"><img src="resources/images/icon.png"> <spring:message code="app.title"/></a>
         <sec:authorize access="!isAuthenticated()">
-            <p><a class="btn btn-lg btn-success" href="<c:url value="/login" />" role="button">Войти</a></p>
+        <div class="nav-item">
+            <a class="btn btn-info mr-1" href="/profile/create">Зарегистрироваться</a>
+            <a class="btn btn-lg btn-success" href="<c:url value="/login" />" role="button">Войти</a>
+        </div>
         </sec:authorize>
            <sec:authorize access="isAuthenticated()">
             <div class="nav-item">
@@ -17,9 +20,6 @@
                     <span class="fa fa-sign-out"> <a  href="<c:url value="/logout" />"/></span>
                 </a>
             </div>
-
-
-
         </sec:authorize>
     </div>
 </nav>

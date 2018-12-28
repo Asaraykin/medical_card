@@ -31,10 +31,7 @@
 
             <div class="col-md-8 order-md-1"
                  style="margin: auto; background-color: #ccd2fc; padding-bottom: 20px; padding-top: 10px">
-              <%--  <c:if test="${id == null}">
-                    <select id="selectUser">
-                    </select>
-                </c:if>--%>
+
                 <div class="mb-3">
                     <label for="name">ФИО</label>
                     <input type="text" class="form-control" id="name" name="name" required value="1">
@@ -55,7 +52,7 @@
                 <div class="row">
                     <div class="col-md-3 mb-3">
                         <label for="telephone">Телефон</label>
-                        <input type="tel" class="form-control" id="telephone"  placeholder="(___)___-__-__"  name="telephone" <%--pattern="^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$"--%> value="1">
+                        <input type="tel" class="form-control" id="telephone"  placeholder="(___)___-__-__"  name="telephone" <%--pattern="^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$"--%> >
                     </div>
 
                     <c:if test="${noPatient != true}">

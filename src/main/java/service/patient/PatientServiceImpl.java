@@ -46,6 +46,7 @@ public class PatientServiceImpl implements PatientService {
 
     @Override
     @Transactional
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'DOCTOR')")
     public void update(Patient patient) {
         Assert.notNull(patient, "patient should be not null");
         checkNotFoundWithId(repository.save(patient), patient.getId());
@@ -57,8 +58,6 @@ public class PatientServiceImpl implements PatientService {
     public void removeWorkPlace(WorkPlace workPlace, int patientId) {
         repository.removeWorkPlace(workPlace, patientId);
     }
-
-
 
     @Override
     @Transactional

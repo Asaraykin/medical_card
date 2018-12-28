@@ -33,10 +33,11 @@
                 Для продолжения работы авторизуйтесь.
             </p>
             <p><a class="btn btn-lg btn-success" href="<c:url value="/login" />" role="button">Войти</a></p>
-
         </sec:authorize>
         <sec:authorize access="isAuthenticated()">
-        <%--    <p><a href="/rest/editUser?id=${userId}"> Редактировать профиль: <sec:authentication property="principal.username" /></a></p>--%>
+            <sec:authorize access="(hasAuthority('ADMIN'))">
+                <p><a href="/profile/create/${userId}">Добавить пользователя</a></p>
+            </sec:authorize>
             <sec:authorize access="hasAnyAuthority('ADMIN', 'DOCTOR')">
                 <p><a href="/userList?id=${userId}">Список пользователей</a></p>
                 <p><a href="/patientListForAdmin?id=${userId}">Список пациентов</a></p>
@@ -45,13 +46,6 @@
             <sec:authorize access="(hasAuthority('PATIENT'))">
                 <p><a href="/userList?id=${userId}">Список пациентов</a></p>
             </sec:authorize>
-
-         <%--   <sec:authorize access="hasAnyAuthority('ADMIN', 'DOCTOR')">
-                <form method="get" action="/rest/patient">
-                    <button type="submit" class="btn btn-secondary" >Добавить пациента</button>
-                </form>
-
-            </sec:authorize>--%>
             <p></p>
 
             <p><a class="btn btn-lg btn-danger" href="<c:url value="/logout" />" role="button">Выйти</a></p>

@@ -26,7 +26,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @PreAuthorize("hasAnyAuthority('ADMIN')")
     public User create(User user) {
         Assert.notNull(user, "user must not be null");
         return repository.save(user);

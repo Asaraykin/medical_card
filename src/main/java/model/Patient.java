@@ -23,18 +23,22 @@ import java.util.Set;
 
 @Entity
 @Table(name = "patient", uniqueConstraints = {@UniqueConstraint(columnNames = {"id"} )})
-public class Patient extends AbstractBaseEntity {
+public class Patient  {
 
     public static final String GET_ALL = "Patient.getAll";
     public static final String GET = "Patient.get";
     public static final String DELETE = "Patient.delete";
 
 
+    @GenericGenerator(name = "generator", strategy = "foreign",
+            parameters = @org.hibernate.annotations.Parameter(name = "property", value = "user"))
     @Id
+    @GeneratedValue(generator = "generator")
+    @Column(name = "id", unique = true, nullable = false)
     private Integer id;
 
-    @OneToOne
-    @JoinColumn(name = "id")
+    @OneToOne(fetch = FetchType.LAZY)
+    @PrimaryKeyJoinColumn
     private User user;
 
 
@@ -75,16 +79,16 @@ public class Patient extends AbstractBaseEntity {
     @JsonManagedReference
     private Set<WorkPlace> workPlaces = new HashSet<>();
 
-    @Override
+
     public void setId(Integer id) {
 this.id = id;    }
 
-    @Override
+
     public Integer getId() {
         return this.id;
     }
 
-    @Override
+
     public boolean isNew() {
         return this.id == null;
     }
@@ -105,8 +109,8 @@ this.id = id;    }
         this.workPlaces = workPlaces;
     }
 
-    public Patient(Integer id, @NotBlank @Size(max = 150) String name, @NotBlank @Size(max = 300) String address, @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$") String telephone, @NotBlank String gender, @Pattern(regexp = "[1-4]") int blood_group, LocalDate date_of_birth) {
-        super(id);
+    public Patient(User user, @NotBlank @Size(max = 150) String name, @NotBlank @Size(max = 300) String address, String telephone, @NotBlank String gender, int blood_group, @NotNull LocalDate date_of_birth) {
+        this.user = user;
         this.name = name;
         this.address = address;
         this.telephone = telephone;

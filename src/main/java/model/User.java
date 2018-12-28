@@ -48,8 +48,7 @@ public class User extends AbstractBaseEntity{
     @Column(name = "id", unique = true, nullable = false)
     private Integer id;
 
-    @PrimaryKeyJoinColumn
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "user", cascade = CascadeType.ALL)
     @JsonBackReference
     private Patient patient;
 

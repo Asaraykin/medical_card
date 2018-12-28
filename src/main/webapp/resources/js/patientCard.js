@@ -139,13 +139,13 @@ function fillWorkPlaces(data) {
             {title: "Место работы", "mDataProp": "name", width: '200px'},
             {
                 title: "Редактировать",
-                "render": renderEditBtn,
+                "render": renderEditBtn1,
                 "defaultContent": "",
                 "orderable": false,
             },
             {
                 title: "Удалить",
-                "render": renderDeleteBtn,
+                "render": renderDeleteBtn1,
                 "defaultContent": "",
                 "orderable": false,
             },
@@ -161,8 +161,8 @@ function fillWorkPlaces(data) {
             }],
         "fnRowCallback": function (nRow, aData, iDisplayIndex) {
             $(nRow).click(function () {
-                renderEditBtn(aData, "display", aData);
-                renderDeleteBtn(aData, "display", aData);
+                renderEditBtn1(aData, "display", aData);
+                renderDeleteBtn1(aData, "display", aData);
             });
             return nRow;
         }
@@ -178,7 +178,7 @@ let aData;
 let patientWorkPlaces = new Array;
 let userList = new Array;
 
-function renderEditBtn(data, type, row) {
+function renderEditBtn1(data, type, row) {
     if (type === "display") {
         aData = data;
         nRow = row;
@@ -186,11 +186,11 @@ function renderEditBtn(data, type, row) {
     }
 }
 
-function renderDeleteBtn(data, type, row) {
+function renderDeleteBtn1(data, type, row) {
     if (type === "display") {
         aData = data;
         nRow = row;
-        return "<a href='javascript:deleteEntity();'><span class='fa fa-remove'></span></a>";
+        return "<a href='javascript:deleteEntity1();'><span class='fa fa-remove'></span></a>";
     }
 }
 
@@ -292,7 +292,7 @@ function updateTable(data) {
 }
 
 
-function deleteEntity() {
+function deleteEntity1() {
     //  console.log("delete");
     let n = new Noty({
         text: '<div id="noty_bar_2b6f61e6-2e4b-4354-b33d-6a93b7798606" ' +
@@ -308,7 +308,6 @@ function deleteEntity() {
                 let tempAjaxURL = ajaxUrl;
                 ajaxUrl = '/rest/patient/workPlace/delete';
                 id = aData.id;
-                //   console.log('button 1 clicked');
                 $.ajax({
                     url: ajaxUrl + '/' + id + "/" + parentId,
                     type: 'DELETE',
@@ -327,6 +326,7 @@ function deleteEntity() {
                         id = tempId;
                         n.close();
                         updateTable(data);
+                        successNoty("common.deleted");
                     }
                 );
             }),
@@ -347,12 +347,13 @@ function checkAndSavePatient() {
 function savePatient() {
     let link;
         link = "/rest/patient/update/" + id;
-        console.log($("#detailsForm"));
-    console.log($("#detailsForm :input[value!='']").serialize());
+ /*   let serializedData = $('#detailsForm').serialize();
+    serializedData = serializedData.replace(/&?[^=]+=&|&[^=]+=$/g,'');
+    console.log($('#detailsForm').serialize());*/
     $.ajax({
         url: link,
         type: 'POST',
-        data: $("#detailsForm :input[value!='']").serialize() ,
+        data: $('#detailsForm').serialize(),
         statusCode: {
             403: function () {
                 failNoty('недостаточно прав');
@@ -369,9 +370,7 @@ function savePatient() {
             //other codes. read the docs for more details
         }
     }).done(function (data) {
-            console.log(data);
-            //   updateTable(data);
-            successNoty('common.saved')
+        successNoty('common.saved')
         }
     );
 }
