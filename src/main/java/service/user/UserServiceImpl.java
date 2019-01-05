@@ -63,4 +63,24 @@ public class UserServiceImpl implements UserService {
     public User getByLogin(String login) {
         return checkNotFound(repository.getByLogin(login), "user not found");
     }
+
+    @Override
+    public long getNumberOfUsers() {
+        return repository.getNumberOfUsers();
+    }
+
+    @Override
+    public int getNumberOfUsersFound() {
+        return repository.getNumberOfUsersFound();
+    }
+
+    @Override
+    public List<User> search(String text, int pageNumber, int pageSize) {
+        return repository.search(text,  pageNumber,  pageSize);
+    }
+
+    @Override
+    public List<User> getByPage(int pageNumber, int pageSize) {
+        return repository.getByPage(pageNumber, pageSize);
+    }
 }

@@ -61,7 +61,7 @@ function deleteEntity() {
         layout: "center",
         theme: 'mint',
         buttons: [
-            Noty.button('YES', 'btn btn-success', function () {
+            Noty.button('Да', 'btn btn-success', function () {
                 console.log('button 1 clicked');
                 $.ajax({
                     url: ajaxUrl + '/' + id + "/" + parentId,
@@ -81,7 +81,7 @@ function deleteEntity() {
                     }
                 );
             }),
-            Noty.button('NO', 'btn btn-error', function () {
+            Noty.button('Нет', 'btn btn-error', function () {
                 n.close();
             })
         ]
@@ -115,7 +115,7 @@ function closeNoty() {
 function successNoty(key) {
     closeNoty();
     new Noty({
-        text: "<span class='fa fa-lg fa-check'></span> &nbsp;" + i18n[key],
+        text: "<span class='fa fa-lg fa-check'></span> " + i18n[key],
         type: 'success',
         layout: "bottomRight",
         timeout: 1000

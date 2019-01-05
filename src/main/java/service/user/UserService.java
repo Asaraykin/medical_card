@@ -19,8 +19,15 @@ public interface UserService {
 
     List<User> getByRole(String role);
 
+    User getByLogin(String login);
 
-     User getByLogin(String login) ;
+    List<User> getByPage(int pageNumber, int pageSize);
+
+    long getNumberOfUsers();
+
+    List<User> search(String text, int pageNumber, int pageSize);
+
+    int getNumberOfUsersFound();
 
 }
 

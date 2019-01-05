@@ -15,7 +15,8 @@ import static javax.persistence.GenerationType.IDENTITY;
         @NamedQuery(name = User.DELETE, query = "DELETE FROM User u WHERE u.id=:id"),
         @NamedQuery(name = User.GET_ALL, query = "SELECT u FROM User u ORDER BY u.login"),
         @NamedQuery(name = User.GET_BY_ROLE, query = "SELECT u FROM User u WHERE u.role=:role ORDER BY u.login"),
-        @NamedQuery(name = User.GET_BY_LOGIN, query = "SELECT DISTINCT u FROM User u WHERE u.login=?1")
+        @NamedQuery(name = User.GET_BY_LOGIN, query = "SELECT DISTINCT u FROM User u WHERE u.login=?1"),
+
 })
 
 @Entity
@@ -26,6 +27,7 @@ public class User extends AbstractBaseEntity{
     public static final String GET_ALL = "User.getAll";
     public static final String GET_BY_ROLE = "User.getByRole";
     public static final String GET_BY_LOGIN = "User.getByLogin";
+
 
     @Column(name = "login", nullable = false, unique = true)
     @NotBlank

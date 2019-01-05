@@ -21,6 +21,7 @@
 <div class="container" style="width: 300px; margin-top: 70px;">
     <form class="form-signin">
         <input type="hidden" id="id" name="id" value="${adminId}">
+        <h1 class="h3 mb-3 font-weight-normal">Добавление нового пользователя</h1>
         <label class="sr-only">Логин</label>
         <input type="text" id="login" name="login" class="form-control" placeholder="Логин">
         <div class="text-danger" id="invalidLogin">

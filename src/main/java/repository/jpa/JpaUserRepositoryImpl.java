@@ -9,6 +9,7 @@ import repository.UserRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
 
 @Repository
@@ -66,5 +67,44 @@ public class JpaUserRepositoryImpl implements UserRepository {
         return DataAccessUtils.singleResult(users);
     }
 
+    @Override
+    public List<User> getByPage(int pageNumber, int pageSize){
+        Query query = em.createQuery("Select u From User u");
+        query.setFirstResult((pageNumber));
+        query.setMaxResults(pageSize);
+        return query.getResultList();
+    }
 
+    @Override
+            public long getNumberOfUsers() {
+        Query queryTotal = em.createQuery
+                ("Select count(f.id) from User f");
+        return  (long) queryTotal.getSingleResult();
+
+    }
+
+    int numberOfUsersFound;
+
+    @Override
+    public List<User> search(String text, int pageNumber, int pageSize){
+        Query query = em.createQuery("SELECT u FROM User u WHERE u.id=:id OR u.login LIKE " +
+                "CONCAT('%',:login ,'%') OR u.role like CONCAT('%', :role, '%')");
+        query.setParameter("id", 0);
+        try{
+            int id = Integer.parseInt(text);
+            query.setParameter("id", id);
+        }
+        catch (NumberFormatException r){
+        }
+        query.setParameter("role", text);
+        query.setParameter("login", text);
+        numberOfUsersFound = query.getResultList().size();
+        query.setFirstResult((pageNumber));
+        query.setMaxResults(pageSize);
+       return query.getResultList();
+    }
+
+    public int getNumberOfUsersFound() {
+        return numberOfUsersFound;
+    }
 }

@@ -22,10 +22,7 @@ $(document).ready(function () {
         if (!noPatient) {
             fill(list);
         }
-       /* else {
-            fillUsers(list);
-        }*/
-    });
+          });
 });
 
 let dataForDatatable;
@@ -334,9 +331,6 @@ function checkAndSavePatient() {
 function savePatient() {
     let link;
         link = "/rest/patient/update/" + id;
- /*   let serializedData = $('#detailsForm').serialize();
-    serializedData = serializedData.replace(/&?[^=]+=&|&[^=]+=$/g,'');
-    console.log($('#detailsForm').serialize());*/
     $.ajax({
         url: link,
         type: 'POST',
@@ -352,8 +346,12 @@ function savePatient() {
                 failNoty(data.responseText);
             },
             500: function (data) {
-                if (data.responseText.indexOf("ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности \"patient_unique_oms_idx\""))
-                failNoty("Номер ОМС уже занят");
+                if (data.responseText.indexOf("ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности \"patient_unique_oms_idx\"")) {
+                    failNoty("Номер ОМС уже занят");
+                }
+                if (data.responseText.indexOf("должно соответствовать шаблону")){
+                    failNoty("Не соответствует шаблону номера телефона");
+                }
             },
             //other codes. read the docs for more details
         }

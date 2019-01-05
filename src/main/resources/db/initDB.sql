@@ -14,9 +14,9 @@ CREATE SEQUENCE global_sequence START 100000;
 CREATE TABLE users
 (
   id               INTEGER PRIMARY KEY DEFAULT nextval('global_sequence'),
-  login            VARCHAR(255)            NOT NULL,
-  role             VARCHAR                 NOT NULL,
-  password         VARCHAR                 NOT NULL
+  login            VARCHAR(250)            NOT NULL,
+  role             VARCHAR (250)                NOT NULL,
+  password         VARCHAR  (250)               NOT NULL
 );
 CREATE UNIQUE INDEX users_unique_login_idx ON users (login);
 
@@ -27,9 +27,9 @@ CREATE TABLE patient
   name             VARCHAR                 NOT NULL,
   date_of_birth    TIMESTAMP               NOT NULL,
   address          VARCHAR                 NOT NULL,
-  telephone        VARCHAR                 NULL,
-  gender           VARCHAR                 NOT NULL,
-  blood_group      INTEGER                 NULL,
+  telephone        VARCHAR(12)                 NULL,
+  gender           VARCHAR (1)                NOT NULL,
+  blood_group      SMALLINT                 NULL,
   FOREIGN KEY (id) REFERENCES users(id) ON DELETE CASCADE
 );
 CREATE UNIQUE INDEX patient_unique_oms_idx ON patient (oms);

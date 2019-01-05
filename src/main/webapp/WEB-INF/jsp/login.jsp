@@ -23,12 +23,12 @@
 <c:url value="/j_spring_security_check" var="loginUrl" />
 <form class="form-signin" action="${loginUrl}" method="post">
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 font-weight-normal">Пожалуйста, авторизуйтесь</h1>
 
     <label  class="sr-only">Логин</label>
-    <input type="text" name="j_username" class="form-control" placeholder="Email address" >
+    <input type="text" name="j_username" class="form-control" placeholder="Логин" >
     <label class="sr-only">Пароль</label>
-    <input type="password" name="j_password" class="form-control" placeholder="Password" >
+    <input type="password" name="j_password" class="form-control" placeholder="Пароль" >
     <button class="btn btn-lg btn-primary btn-block" type="submit"><spring:message code="app.enter"/> </button>
     <p class="mt-5 mb-3 text-muted">© 2018-2019</p>
 </form>

@@ -57,7 +57,7 @@ public class Patient  {
     private String oms;
 
     @Column
-  //  @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$")
+   @Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$")
     private String telephone;
 
     @Column
