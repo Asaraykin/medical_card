@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -30,6 +30,13 @@
     <label class="sr-only">Пароль</label>
     <input type="password" name="j_password" class="form-control" placeholder="Пароль" >
     <button class="btn btn-lg btn-primary btn-block" type="submit"><spring:message code="app.enter"/> </button>
+
+    <c:if test="${param.error != null}">
+        <div class="error" style="width: 100%; margin-top: 0.25rem;font-size: 80%;color: #dc3545;">
+            <spring:message code="login.badCredentials">
+            </spring:message>
+        </div>
+    </c:if>
     <p class="mt-5 mb-3 text-muted">© 2018-2019</p>
 </form>
 </div>

@@ -181,29 +181,7 @@ public class RootController {
         return "createProfile";
     }
 
-    @GetMapping("/test")
-    public String test(Model model) {
-        User user = userService.get(100000);
 
-        PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-        String rawPassword = "1";
-        user.setPassword(passwordEncoder.encode(rawPassword));
-        String passwordFromDB = user.getPassword();
-        boolean isMatched = passwordEncoder.matches(rawPassword, user.getPassword());
-        model.addAttribute("hashedPassword", rawPassword);
-        model.addAttribute("passwordFromDB", passwordFromDB);
-        model.addAttribute("mathed", isMatched);
-        userService.create(user);
-        if (passwordEncoder.matches(rawPassword, user.getPassword())) {
-            // user password is correct
-            System.out.println("correct");
-        }
-        else{
-            //user password incorrect
-            System.out.println("incorrect");
-        }
-        return "test";
-    }
 
 
 

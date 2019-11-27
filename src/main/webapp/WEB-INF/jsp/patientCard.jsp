@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -139,7 +139,7 @@
             </div>
             <div class="modal-body">
                 <form id="detailsFormModal" class="needs-validation"
-                      novalidate <%--onsubmit="return checkAndSaveWorkPlace()"--%>>
+                      novalidate>
 
                     <div class="container" style="width: 400px; text-align: center; margin-bottom: 30px">
 

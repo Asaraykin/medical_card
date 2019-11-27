@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/hospital</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="xgb_topjava@postgres72.1gb.ru" uuid="5e08dfd6-02b4-4fec-b8ef-2f33f42b5476">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://postgres72.1gb.ru:5432/xgb_topjava</jdbc-url>
+    </data-source>
   </component>
 </project>
