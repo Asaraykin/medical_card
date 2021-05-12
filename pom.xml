@@ -21,7 +21,7 @@
         <tomcat.version>9.0.12</tomcat.version>
 
         <spring.version>5.1.2.RELEASE</spring.version>
-        <spring.securiry>5.1.2.RELEASE</spring.securiry>
+        <spring.securiry>5.2.10.RELEASE</spring.securiry>
 
         <!-- Logging -->
         <logback.version>1.2.3</logback.version>
